@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using ShortCourseTraining.Model;
 
 namespace ShortCourseTraining.Database
 {
@@ -19,12 +21,98 @@ namespace ShortCourseTraining.Database
 
         string cs = ConfigurationManager.ConnectionStrings["ShortCourseDB"].ConnectionString;
 
+        
 
-
-
-        private byte[] GetImageBuff(string fileName)
+        public void SignUpCompany(string fileName)
         {
-            Image img = Image.FromFile(fileName);
+            string insertQuery = @"INSERT INTO Companies([CompanyName],[CompanyAddress],[CompanyPhone],[CompanyEmail],[Logo],[AdminUserID],
+[AdminUserPass],[CompanyStatus]) VALUES(@CompanyName,@CompanyAddress,@CompanyPhone,@CompanyEmail,@Logo,@AdminUserID,@AdminUserPass,@CompanyStatus)";
+            try
+            {
+                byte[] bytes = null; 
+                //bytes = GetImageBuff(fileName);
+
+                conn.Open();
+                command = new OleDbCommand(insertQuery, conn);
+
+                /*Random random = new Random();
+                command.Parameters.Add("@Username", oleDbType:, 50).Value = textBoxUsername.Text;
+                command.Parameters.Add("@Password", SqlDbType.NVarChar, 50).Value = textBoxPassword.Text;
+                command.Parameters.Add("@IPAddress", SqlDbType.NVarChar, 15).Value = IPAddressGenerator();
+                command.Parameters.Add("@Port", SqlDbType.Int).Value = random.Next(30, 3000);
+                command.Parameters.Add("@Email", SqlDbType.NVarChar, textBoxemail.TextLength).Value = textBoxemail.Text;
+                command.Parameters.Add("@UserImage", SqlDbType.Image, bytes.Length).Value = bytes;
+                if (textBoxPassword.Text == textBoxConfirmPass.Text)
+                {
+                    command.ExecuteNonQuery();
+                    conn.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Password doesn't match");
+                    conn.Close();
+                }*/
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Company register failed : " + ex.Message);
+            }
+            finally
+            {
+                if (conn != null)
+                {
+                    conn.Close();
+                }
+            }
+        }
+
+        public void SignUpUser(/*string fileName,*/User user)
+        {
+            string insertQuery = @"INSERT INTO Users([Username],[Gender],[Password],[Description],[Phone],[Email],[Photo],[CreatedDate],[Status]) 
+VALUES(@Username,@Gender,@Password,@Description,@Phone,@Email,@Photo,@CreatedDate,@Status)";
+            try
+            {
+                byte[] bytes = null;
+                //bytes = GetImageBuff(fileName);
+                bytes = GetImageBuff(user.Photo);
+
+                conn = new OleDbConnection();
+                conn.ConnectionString = cs;
+                conn.Open();
+
+                command = new OleDbCommand(insertQuery, conn);
+                
+                command.Parameters.Add("@Username", OleDbType.VarChar, 50).Value = user.Username;
+                command.Parameters.Add("@Gender", OleDbType.VarChar, 6).Value = user.Gender;
+                command.Parameters.Add("@Password", OleDbType.VarChar, 50).Value = user.Password;
+                command.Parameters.Add("@Description", OleDbType.LongVarChar, 150).Value = user.Description;//description
+                command.Parameters.Add("@Phone", OleDbType.VarChar,20).Value = user.PhoneNumber;//phone number
+                command.Parameters.Add("@Email", OleDbType.VarChar, user.Email.Length).Value = user.Email;
+                command.Parameters.Add("@Photo", OleDbType.LongVarBinary, bytes.Length).Value = bytes;
+                command.Parameters.Add("@CreatedDate", OleDbType.DBDate).Value = DateTime.Now.Date;
+                command.Parameters.Add("@Status", OleDbType.TinyInt, 1).Value = user.Status;
+                //add the user first
+                command.ExecuteNonQuery();
+                //then add the user to the UserRole in DB as an insert query 'Admin' here
+                //more query here
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("User register failed : " + ex.Message);
+            }
+            finally
+            {
+                if (conn != null)
+                {
+                    conn.Close();
+                }
+            }
+        }
+        private byte[] GetImageBuff(Image photo/*string fileName*/)
+        {
+            //Image img = Image.FromFile(fileName);
+            Image img = photo;
             int maxWidth = 300, maxHeight = 300;
 
             //Sizes were chosen arbitrarily
@@ -49,91 +137,6 @@ namespace ShortCourseTraining.Database
             BinaryReader br = new BinaryReader(ms);
             byte[] buf = br.ReadBytes((int)ms.Length);
             return buf;
-        }
-
-        public void SignUpCompany(string fileName)
-        {
-            string insertQuery = @"INSERT INTO Users([CompanyName],[CompanyAddress],[CompanyPhone],[CompanyEmail],[Logo],[AdminUserID],
-[AdminUserPass],[CompanyStatus]) VALUES(@CompanyName,@CompanyAddress,@CompanyPhone,@CompanyEmail,@Logo,@AdminUserID,@AdminUserPass,@CompanyStatus)";
-            try
-            {
-                byte[] bytes = null; 
-                bytes = GetImageBuff(fileName);
-
-                conn.Open();
-                command = new OleDbCommand(insertQuery, conn);
-
-                /*Random random = new Random();
-                command.Parameters.Add("@Username", SqlDbType.NVarChar, 50).Value = textBoxUsername.Text;
-                command.Parameters.Add("@Password", SqlDbType.NVarChar, 50).Value = textBoxPassword.Text;
-                command.Parameters.Add("@IPAddress", SqlDbType.NVarChar, 15).Value = IPAddressGenerator();
-                command.Parameters.Add("@Port", SqlDbType.Int).Value = random.Next(30, 3000);
-                command.Parameters.Add("@Email", SqlDbType.NVarChar, textBoxemail.TextLength).Value = textBoxemail.Text;
-                command.Parameters.Add("@UserImage", SqlDbType.Image, bytes.Length).Value = bytes;
-                if (textBoxPassword.Text == textBoxConfirmPass.Text)
-                {
-                    comm.ExecuteNonQuery();
-                    conn.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Password doesn't match");
-                    conn.Close();
-                }*/
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Company register failed : " + ex.Message);
-            }
-            finally
-            {
-                if (conn != null)
-                {
-                    conn.Close();
-                }
-            }
-        }
-
-        public void SignUpUser(string fileName)
-        {
-            string insertQuery = @"INSERT INTO Companies() VALUES()";
-            try
-            {
-                byte[] bytes = null;
-                bytes = GetImageBuff(fileName);
-
-                conn.Open();
-                command = new OleDbCommand(insertQuery, conn);
-
-                /*Random random = new Random();
-                command.Parameters.Add("@Username", SqlDbType.NVarChar, 50).Value = textBoxUsername.Text;
-                command.Parameters.Add("@Password", SqlDbType.NVarChar, 50).Value = textBoxPassword.Text;
-                command.Parameters.Add("@IPAddress", SqlDbType.NVarChar, 15).Value = IPAddressGenerator();
-                command.Parameters.Add("@Port", SqlDbType.Int).Value = random.Next(30, 3000);
-                command.Parameters.Add("@Email", SqlDbType.NVarChar, textBoxemail.TextLength).Value = textBoxemail.Text;
-                command.Parameters.Add("@UserImage", SqlDbType.Image, bytes.Length).Value = bytes;
-                if (textBoxPassword.Text == textBoxConfirmPass.Text)
-                {
-                    comm.ExecuteNonQuery();
-                    conn.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Password doesn't match");
-                    conn.Close();
-                }*/
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("User register failed : " + ex.Message);
-            }
-            finally
-            {
-                if (conn != null)
-                {
-                    conn.Close();
-                }
-            }
         }
 
     }

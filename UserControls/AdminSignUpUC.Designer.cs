@@ -38,8 +38,6 @@ namespace ShortCourseTraining
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxConfirmPass = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.PictureBoxAdmin = new FontAwesome.Sharp.IconPictureBox();
             this.radioButtonMale = new System.Windows.Forms.RadioButton();
             this.radioButtonFemale = new System.Windows.Forms.RadioButton();
@@ -150,24 +148,6 @@ namespace ShortCourseTraining
             this.label5.TabIndex = 21;
             this.label5.Text = "Confirm Password :";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("OCR A Extended", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(543, 188);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(163, 20);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "Date of birth:";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("OCR A Extended", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(547, 211);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(337, 24);
-            this.dateTimePicker1.TabIndex = 24;
-            // 
             // PictureBoxAdmin
             // 
             this.PictureBoxAdmin.BackColor = System.Drawing.SystemColors.Control;
@@ -190,7 +170,7 @@ namespace ShortCourseTraining
             // 
             this.radioButtonMale.AutoSize = true;
             this.radioButtonMale.Font = new System.Drawing.Font("OCR A Extended", 14.25F);
-            this.radioButtonMale.Location = new System.Drawing.Point(679, 241);
+            this.radioButtonMale.Location = new System.Drawing.Point(679, 208);
             this.radioButtonMale.Name = "radioButtonMale";
             this.radioButtonMale.Size = new System.Drawing.Size(71, 24);
             this.radioButtonMale.TabIndex = 26;
@@ -202,7 +182,7 @@ namespace ShortCourseTraining
             // 
             this.radioButtonFemale.AutoSize = true;
             this.radioButtonFemale.Font = new System.Drawing.Font("OCR A Extended", 14.25F);
-            this.radioButtonFemale.Location = new System.Drawing.Point(791, 241);
+            this.radioButtonFemale.Location = new System.Drawing.Point(791, 208);
             this.radioButtonFemale.Name = "radioButtonFemale";
             this.radioButtonFemale.Size = new System.Drawing.Size(93, 24);
             this.radioButtonFemale.TabIndex = 27;
@@ -214,7 +194,7 @@ namespace ShortCourseTraining
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("OCR A Extended", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(543, 243);
+            this.label7.Location = new System.Drawing.Point(543, 210);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(97, 20);
             this.label7.TabIndex = 28;
@@ -297,7 +277,7 @@ namespace ShortCourseTraining
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("OCR A Extended", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(543, 277);
+            this.label10.Location = new System.Drawing.Point(543, 257);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(152, 20);
             this.label10.TabIndex = 35;
@@ -306,7 +286,7 @@ namespace ShortCourseTraining
             // textBoxDescription
             // 
             this.textBoxDescription.Font = new System.Drawing.Font("OCR A Extended", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDescription.Location = new System.Drawing.Point(547, 300);
+            this.textBoxDescription.Location = new System.Drawing.Point(547, 280);
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -329,8 +309,6 @@ namespace ShortCourseTraining
             this.Controls.Add(this.radioButtonFemale);
             this.Controls.Add(this.radioButtonMale);
             this.Controls.Add(this.PictureBoxAdmin);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.textBoxConfirmPass);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBoxPassword);
@@ -359,8 +337,6 @@ namespace ShortCourseTraining
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxConfirmPass;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private FontAwesome.Sharp.IconPictureBox PictureBoxAdmin;
         private System.Windows.Forms.RadioButton radioButtonMale;
         private System.Windows.Forms.RadioButton radioButtonFemale;

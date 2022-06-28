@@ -27,7 +27,7 @@ namespace ShortCourseTraining
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            conn = new OleDbConnection();
+            /*conn = new OleDbConnection();
                     cs = ConfigurationManager.ConnectionStrings["ShortCourseDB"].ConnectionString;
                     conn.ConnectionString = cs;
 
@@ -49,7 +49,7 @@ namespace ShortCourseTraining
             catch (Exception ex)
             {
                 MessageBox.Show("error : " + ex.Message);
-            }
+            }*/
         }
 
         private void ButtonClose_Click(object sender, EventArgs e)

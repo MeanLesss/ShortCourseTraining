@@ -35,6 +35,7 @@
             this.ButtonClose = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panelWelcome = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panelWelcome.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +48,7 @@
             this.ButtonCompany.IconColor = System.Drawing.Color.Black;
             this.ButtonCompany.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ButtonCompany.IconSize = 80;
-            this.ButtonCompany.Location = new System.Drawing.Point(121, 129);
+            this.ButtonCompany.Location = new System.Drawing.Point(121, 190);
             this.ButtonCompany.Name = "ButtonCompany";
             this.ButtonCompany.Size = new System.Drawing.Size(312, 190);
             this.ButtonCompany.TabIndex = 0;
@@ -65,7 +66,7 @@
             this.ButtonUser.IconColor = System.Drawing.Color.Chocolate;
             this.ButtonUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ButtonUser.IconSize = 80;
-            this.ButtonUser.Location = new System.Drawing.Point(573, 129);
+            this.ButtonUser.Location = new System.Drawing.Point(573, 190);
             this.ButtonUser.Name = "ButtonUser";
             this.ButtonUser.Size = new System.Drawing.Size(312, 190);
             this.ButtonUser.TabIndex = 2;
@@ -137,6 +138,7 @@
             // 
             // panelWelcome
             // 
+            this.panelWelcome.Controls.Add(this.label3);
             this.panelWelcome.Controls.Add(this.label1);
             this.panelWelcome.Controls.Add(this.ButtonCompany);
             this.panelWelcome.Controls.Add(this.ButtonUser);
@@ -146,6 +148,16 @@
             this.panelWelcome.Name = "panelWelcome";
             this.panelWelcome.Size = new System.Drawing.Size(1000, 454);
             this.panelWelcome.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("OCR A Extended", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(397, 124);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(205, 35);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Log in as ";
             // 
             // WelcomeForm
             // 
@@ -176,6 +188,7 @@
         private FontAwesome.Sharp.IconButton ButtonClose;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Panel panelWelcome;
+        private System.Windows.Forms.Label label3;
     }
 }
 

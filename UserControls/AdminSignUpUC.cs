@@ -11,12 +11,14 @@ using System.Data.OleDb;
 using System.Configuration;
 using System.IO;
 using System.Drawing.Imaging;
+using ShortCourseTraining.Database;
+using ShortCourseTraining.Model;
 
 namespace ShortCourseTraining
 {
     public partial class AdminSignUpUC : UserControl
     {
-        
+        private FileInfo file;
 
         public AdminSignUpUC()
         {
@@ -35,6 +37,7 @@ namespace ShortCourseTraining
             DialogResult dr = of.ShowDialog();
             if (dr == DialogResult.OK)
             {
+                file = new FileInfo(of.FileName);
                 Image photo = Image.FromFile(of.FileName);
                 //product.Photo = photo;
                 PictureBoxAdmin.Image = photo;
@@ -48,7 +51,41 @@ namespace ShortCourseTraining
 
         private void ButtonSignUp_Click(object sender, EventArgs e)
         {
-           
+            DatabaseManager database = new DatabaseManager();
+
+            //for company is use as an update query when there is a company that need to assign to
+            if (textBoxPassword.Text == textBoxConfirmPass.Text)
+            {
+                User user = new User
+                {
+                    Username = textBoxUsername.Text,
+                    Password = textBoxConfirmPass.Text,
+                    Description = textBoxDescription.Text,
+                    PhoneNumber = textBoxPhone.Text,
+                    Email = textBoxEmail.Text,
+                    Photo = PictureBoxAdmin.Image,
+                    CreatedDate = DateTime.Now.Date,
+                    Status = 1
+                };
+                if (radioButtonMale.Checked)
+                {
+                    radioButtonFemale.Checked = false;
+                    user.Gender = "Male";
+                }
+
+                if (radioButtonFemale.Checked)
+                {
+                    radioButtonMale.Checked = false;
+                    user.Gender = "Female";
+                }
+
+                database.SignUpUser(/*file.FullName, */user);
+                MessageBox.Show("Company Created");
+            }
+            else
+            {
+                MessageBox.Show("Password doesn't match");
+            }
         }
     }
 }
