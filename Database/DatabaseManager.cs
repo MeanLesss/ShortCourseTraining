@@ -64,10 +64,11 @@ namespace ShortCourseTraining.Database
             }
         }
 
+        [Obsolete]
         public void SignUpUser(/*string fileName,*/User user)
         {
-            string insertQuery = @"INSERT INTO Users([Username],[Gender],[Password],[Description],[Phone],[Email],[Photo],[CreatedDate],[Status]) 
-VALUES(@Username,@Gender,@Password,@Description,@Phone,@Email,@Photo,@CreatedDate,@Status)";
+            string insertQuery = @"INSERT INTO Users([CompanyID],[Username],[Gender],[Password],[Description],[Phone],[Email],[Photo],[CreatedDate],[Status]) 
+VALUES(@CompanyID,@Username,@Gender,@Password,@Description,@Phone,@Email,@Photo,@CreatedDate,@Status)";
             try
             {
                 byte[] bytes = null;
@@ -79,14 +80,22 @@ VALUES(@Username,@Gender,@Password,@Description,@Phone,@Email,@Photo,@CreatedDat
                 conn.Open();
 
                 command = new OleDbCommand(insertQuery, conn);
-                
+
+                command.Parameters.Add("@CompanyID", OleDbType.TinyInt).Value = user.ComID;
                 command.Parameters.Add("@Username", OleDbType.VarChar, 50).Value = user.Username;
                 command.Parameters.Add("@Gender", OleDbType.VarChar, 6).Value = user.Gender;
                 command.Parameters.Add("@Password", OleDbType.VarChar, 50).Value = user.Password;
                 command.Parameters.Add("@Description", OleDbType.LongVarChar, 150).Value = user.Description;//description
                 command.Parameters.Add("@Phone", OleDbType.VarChar,20).Value = user.PhoneNumber;//phone number
                 command.Parameters.Add("@Email", OleDbType.VarChar, user.Email.Length).Value = user.Email;
-                command.Parameters.Add("@Photo", OleDbType.LongVarBinary, bytes.Length).Value = bytes;
+                if (user.Photo == null)
+                {
+                    command.Parameters.Add("@Photo", DBNull.Value);
+                }
+                else
+                {
+                    command.Parameters.Add("@Photo", OleDbType.LongVarBinary, bytes.Length).Value = bytes;
+                }
                 command.Parameters.Add("@CreatedDate", OleDbType.DBDate).Value = DateTime.Now.Date;
                 command.Parameters.Add("@Status", OleDbType.TinyInt, 1).Value = user.Status;
                 //add the user first

@@ -57,6 +57,7 @@ namespace ShortCourseTraining
             this.Hide();
         }
 
+        [Obsolete]
         private void ButtonSignUp_Click(object sender, EventArgs e)
         {
             DatabaseManager database = new DatabaseManager();
@@ -88,7 +89,13 @@ namespace ShortCourseTraining
                     user.Gender = "Female";
                 }
 
-                database.SignUpUser(/*file.FullName, */user);
+                /*if (PictureBoxAdmin.Image == null)
+                {
+                    user.Photo = null;
+                }*/
+
+                database.SignUpUser(user);
+
                 MessageBox.Show("Company Created");
             }
             else

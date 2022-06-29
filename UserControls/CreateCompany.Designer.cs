@@ -49,6 +49,7 @@
             // ButtonCreate
             // 
             this.ButtonCreate.BackColor = System.Drawing.Color.Chocolate;
+            this.ButtonCreate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonCreate.FlatAppearance.BorderSize = 0;
             this.ButtonCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonCreate.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -67,6 +68,7 @@
             // 
             // ButtonCancel
             // 
+            this.ButtonCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonCancel.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonCancel.IconChar = FontAwesome.Sharp.IconChar.CaretLeft;
@@ -102,7 +104,9 @@
             // PictureBoxComLogo
             // 
             this.PictureBoxComLogo.BackColor = System.Drawing.SystemColors.Control;
+            this.PictureBoxComLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.PictureBoxComLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PictureBoxComLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureBoxComLogo.ForeColor = System.Drawing.Color.Chocolate;
             this.PictureBoxComLogo.IconChar = FontAwesome.Sharp.IconChar.Image;
             this.PictureBoxComLogo.IconColor = System.Drawing.Color.Chocolate;

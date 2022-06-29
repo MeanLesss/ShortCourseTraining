@@ -152,6 +152,7 @@ namespace ShortCourseTraining
             // 
             this.PictureBoxAdmin.BackColor = System.Drawing.SystemColors.Control;
             this.PictureBoxAdmin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PictureBoxAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PictureBoxAdmin.ForeColor = System.Drawing.Color.Chocolate;
             this.PictureBoxAdmin.IconChar = FontAwesome.Sharp.IconChar.Image;
             this.PictureBoxAdmin.IconColor = System.Drawing.Color.Chocolate;
@@ -238,6 +239,7 @@ namespace ShortCourseTraining
             // 
             // ButtonCancel
             // 
+            this.ButtonCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonCancel.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonCancel.IconChar = FontAwesome.Sharp.IconChar.CaretLeft;
@@ -256,6 +258,7 @@ namespace ShortCourseTraining
             // ButtonSignUp
             // 
             this.ButtonSignUp.BackColor = System.Drawing.Color.Chocolate;
+            this.ButtonSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonSignUp.FlatAppearance.BorderSize = 0;
             this.ButtonSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonSignUp.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

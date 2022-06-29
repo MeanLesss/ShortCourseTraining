@@ -49,7 +49,7 @@ namespace ShortCourseTraining.Database
                     user.PhoneNumber = dt.Rows[0][6].ToString();
                     user.Email = dt.Rows[0][7].ToString();
 
-                    //read image from binary
+                    //read Image form binary
                     byte[] imageBytes = (byte[])dt.Rows[0][8];
                     MemoryStream ms = new MemoryStream(imageBytes);
                     user.Photo = Image.FromStream(ms);

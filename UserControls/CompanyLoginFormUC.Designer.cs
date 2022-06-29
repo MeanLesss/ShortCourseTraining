@@ -107,6 +107,7 @@ namespace ShortCourseTraining
             // ButtonLogIn
             // 
             this.ButtonLogIn.BackColor = System.Drawing.Color.Chocolate;
+            this.ButtonLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonLogIn.FlatAppearance.BorderSize = 0;
             this.ButtonLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonLogIn.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -126,6 +127,7 @@ namespace ShortCourseTraining
             // ButtonSignUp
             // 
             this.ButtonSignUp.BackColor = System.Drawing.Color.White;
+            this.ButtonSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonSignUp.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonSignUp.ForeColor = System.Drawing.Color.Black;
