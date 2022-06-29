@@ -27,7 +27,7 @@ namespace ShortCourseTraining.Model
         [Required]
         [PasswordPropertyText]
         public string Password { get; set; } //admin password
-        public int ActiveStatus { get; set; }
+        public bool ActiveStatus { get; set; }
 
         public Company()
         {

@@ -27,7 +27,7 @@ namespace ShortCourseTraining.Model
         public string Email { get; set; }
         public Image Photo { get; set; }
         public DateTime CreatedDate { get; set; }
-        public int Status { get; set; }
+        public bool Status { get; set; }
         public UserRole UserRole { get; set; }
     }
 }

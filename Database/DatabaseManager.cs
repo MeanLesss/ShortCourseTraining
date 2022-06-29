@@ -20,9 +20,7 @@ namespace ShortCourseTraining.Database
         OleDbCommand command = null;
 
         string cs = ConfigurationManager.ConnectionStrings["ShortCourseDB"].ConnectionString;
-
         
-
         public void SignUpCompany(string fileName)
         {
             string insertQuery = @"INSERT INTO Companies([CompanyName],[CompanyAddress],[CompanyPhone],[CompanyEmail],[Logo],[AdminUserID],

@@ -46,7 +46,7 @@ namespace ShortCourseTraining
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.ButtonCompany = new FontAwesome.Sharp.IconButton();
+            this.ButtonCancel = new FontAwesome.Sharp.IconButton();
             this.ButtonSignUp = new FontAwesome.Sharp.IconButton();
             this.label10 = new System.Windows.Forms.Label();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
@@ -157,7 +157,7 @@ namespace ShortCourseTraining
             this.PictureBoxAdmin.IconColor = System.Drawing.Color.Chocolate;
             this.PictureBoxAdmin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.PictureBoxAdmin.IconSize = 168;
-            this.PictureBoxAdmin.Location = new System.Drawing.Point(635, 0);
+            this.PictureBoxAdmin.Location = new System.Drawing.Point(635, 8);
             this.PictureBoxAdmin.Name = "PictureBoxAdmin";
             this.PictureBoxAdmin.Size = new System.Drawing.Size(168, 177);
             this.PictureBoxAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -236,22 +236,22 @@ namespace ShortCourseTraining
             this.label9.TabIndex = 31;
             this.label9.Text = "Email :";
             // 
-            // ButtonCompany
+            // ButtonCancel
             // 
-            this.ButtonCompany.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonCompany.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonCompany.IconChar = FontAwesome.Sharp.IconChar.CaretLeft;
-            this.ButtonCompany.IconColor = System.Drawing.Color.Chocolate;
-            this.ButtonCompany.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ButtonCompany.IconSize = 40;
-            this.ButtonCompany.Location = new System.Drawing.Point(547, 398);
-            this.ButtonCompany.Name = "ButtonCompany";
-            this.ButtonCompany.Size = new System.Drawing.Size(120, 41);
-            this.ButtonCompany.TabIndex = 33;
-            this.ButtonCompany.Text = "Cancel";
-            this.ButtonCompany.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ButtonCompany.UseVisualStyleBackColor = true;
-            this.ButtonCompany.Click += new System.EventHandler(this.ButtonCompany_Click);
+            this.ButtonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonCancel.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonCancel.IconChar = FontAwesome.Sharp.IconChar.CaretLeft;
+            this.ButtonCancel.IconColor = System.Drawing.Color.Chocolate;
+            this.ButtonCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ButtonCancel.IconSize = 40;
+            this.ButtonCancel.Location = new System.Drawing.Point(547, 398);
+            this.ButtonCancel.Name = "ButtonCancel";
+            this.ButtonCancel.Size = new System.Drawing.Size(120, 41);
+            this.ButtonCancel.TabIndex = 33;
+            this.ButtonCancel.Text = "Cancel";
+            this.ButtonCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ButtonCancel.UseVisualStyleBackColor = true;
+            this.ButtonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
             // ButtonSignUp
             // 
@@ -300,7 +300,7 @@ namespace ShortCourseTraining
             this.Controls.Add(this.textBoxDescription);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.ButtonSignUp);
-            this.Controls.Add(this.ButtonCompany);
+            this.Controls.Add(this.ButtonCancel);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBoxPhone);
@@ -345,7 +345,7 @@ namespace ShortCourseTraining
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label label9;
-        private FontAwesome.Sharp.IconButton ButtonCompany;
+        private FontAwesome.Sharp.IconButton ButtonCancel;
         private FontAwesome.Sharp.IconButton ButtonSignUp;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBoxDescription;

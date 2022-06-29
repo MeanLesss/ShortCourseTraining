@@ -24,7 +24,15 @@ namespace ShortCourseTraining
         {
             InitializeComponent();
         }
-
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Enter)
+            {
+                ButtonSignUp.PerformClick();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
         private void ButtonBack_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -44,7 +52,7 @@ namespace ShortCourseTraining
             }
         }
 
-        private void ButtonCompany_Click(object sender, EventArgs e)
+        private void ButtonCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
@@ -59,13 +67,14 @@ namespace ShortCourseTraining
                 User user = new User
                 {
                     Username = textBoxUsername.Text,
+                    ComID = 0,
                     Password = textBoxConfirmPass.Text,
                     Description = textBoxDescription.Text,
                     PhoneNumber = textBoxPhone.Text,
                     Email = textBoxEmail.Text,
                     Photo = PictureBoxAdmin.Image,
                     CreatedDate = DateTime.Now.Date,
-                    Status = 1
+                    Status = true
                 };
                 if (radioButtonMale.Checked)
                 {
@@ -87,5 +96,6 @@ namespace ShortCourseTraining
                 MessageBox.Show("Password doesn't match");
             }
         }
+        
     }
 }
