@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ButtonCreate = new FontAwesome.Sharp.IconButton();
+            this.ButtonNext = new FontAwesome.Sharp.IconButton();
             this.ButtonCancel = new FontAwesome.Sharp.IconButton();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -46,42 +46,44 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxComLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // ButtonCreate
+            // ButtonNext
             // 
-            this.ButtonCreate.BackColor = System.Drawing.Color.Chocolate;
-            this.ButtonCreate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtonCreate.FlatAppearance.BorderSize = 0;
-            this.ButtonCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonCreate.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonCreate.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ButtonCreate.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.ButtonCreate.IconColor = System.Drawing.Color.Black;
-            this.ButtonCreate.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ButtonCreate.IconSize = 40;
-            this.ButtonCreate.Location = new System.Drawing.Point(763, 395);
-            this.ButtonCreate.Name = "ButtonCreate";
-            this.ButtonCreate.Size = new System.Drawing.Size(120, 41);
-            this.ButtonCreate.TabIndex = 55;
-            this.ButtonCreate.Text = "Create";
-            this.ButtonCreate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ButtonCreate.UseVisualStyleBackColor = false;
+            this.ButtonNext.BackColor = System.Drawing.Color.Chocolate;
+            this.ButtonNext.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonNext.FlatAppearance.BorderSize = 0;
+            this.ButtonNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonNext.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonNext.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ButtonNext.IconChar = FontAwesome.Sharp.IconChar.CaretSquareRight;
+            this.ButtonNext.IconColor = System.Drawing.Color.Black;
+            this.ButtonNext.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ButtonNext.IconSize = 40;
+            this.ButtonNext.Location = new System.Drawing.Point(763, 395);
+            this.ButtonNext.Name = "ButtonNext";
+            this.ButtonNext.Size = new System.Drawing.Size(120, 41);
+            this.ButtonNext.TabIndex = 55;
+            this.ButtonNext.Text = "Next";
+            this.ButtonNext.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.ButtonNext.UseVisualStyleBackColor = false;
+            this.ButtonNext.Click += new System.EventHandler(this.ButtonNext_Click);
             // 
             // ButtonCancel
             // 
             this.ButtonCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonCancel.Font = new System.Drawing.Font("Open Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonCancel.IconChar = FontAwesome.Sharp.IconChar.CaretLeft;
+            this.ButtonCancel.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
             this.ButtonCancel.IconColor = System.Drawing.Color.Chocolate;
             this.ButtonCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ButtonCancel.IconSize = 40;
-            this.ButtonCancel.Location = new System.Drawing.Point(546, 397);
+            this.ButtonCancel.Location = new System.Drawing.Point(546, 395);
             this.ButtonCancel.Name = "ButtonCancel";
             this.ButtonCancel.Size = new System.Drawing.Size(120, 41);
             this.ButtonCancel.TabIndex = 54;
             this.ButtonCancel.Text = "Cancel";
             this.ButtonCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ButtonCancel.UseVisualStyleBackColor = true;
+            this.ButtonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
             // textBoxEmail
             // 
@@ -111,14 +113,15 @@
             this.PictureBoxComLogo.IconChar = FontAwesome.Sharp.IconChar.Image;
             this.PictureBoxComLogo.IconColor = System.Drawing.Color.Chocolate;
             this.PictureBoxComLogo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.PictureBoxComLogo.IconSize = 168;
-            this.PictureBoxComLogo.Location = new System.Drawing.Point(715, 44);
+            this.PictureBoxComLogo.IconSize = 256;
+            this.PictureBoxComLogo.Location = new System.Drawing.Point(584, 95);
             this.PictureBoxComLogo.Name = "PictureBoxComLogo";
-            this.PictureBoxComLogo.Size = new System.Drawing.Size(168, 177);
+            this.PictureBoxComLogo.Size = new System.Drawing.Size(256, 256);
             this.PictureBoxComLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBoxComLogo.TabIndex = 46;
             this.PictureBoxComLogo.TabStop = false;
             this.PictureBoxComLogo.WaitOnLoad = true;
+            this.PictureBoxComLogo.Click += new System.EventHandler(this.PictureBoxComLogo_Click);
             // 
             // textBoxPhone
             // 
@@ -190,6 +193,7 @@
             this.ButtonBack.TabIndex = 39;
             this.ButtonBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ButtonBack.UseVisualStyleBackColor = false;
+            this.ButtonBack.Click += new System.EventHandler(this.ButtonBack_Click);
             // 
             // label2
             // 
@@ -216,18 +220,18 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("OCR A Extended", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(546, 44);
+            this.label6.Location = new System.Drawing.Point(642, 42);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(163, 20);
+            this.label6.Size = new System.Drawing.Size(141, 20);
             this.label6.TabIndex = 56;
-            this.label6.Text = "Company Logo :";
+            this.label6.Text = "Company Logo";
             // 
             // CreateCompany
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.ButtonCreate);
+            this.Controls.Add(this.ButtonNext);
             this.Controls.Add(this.ButtonCancel);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.label8);
@@ -250,7 +254,7 @@
         }
 
         #endregion
-        private FontAwesome.Sharp.IconButton ButtonCreate;
+        private FontAwesome.Sharp.IconButton ButtonNext;
         private FontAwesome.Sharp.IconButton ButtonCancel;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label label8;

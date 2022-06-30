@@ -165,7 +165,7 @@ namespace ShortCourseTraining
             this.linkLabelCreateComapny.TabIndex = 12;
             this.linkLabelCreateComapny.TabStop = true;
             this.linkLabelCreateComapny.Text = "Create Company";
-            this.linkLabelCreateComapny.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelCreateComapny_LinkClicked);
+            this.linkLabelCreateComapny.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelCreateCompany_LinkClicked);
             // 
             // ButtonBack
             // 
@@ -203,9 +203,9 @@ namespace ShortCourseTraining
             this.label7.ForeColor = System.Drawing.Color.Red;
             this.label7.Location = new System.Drawing.Point(248, 416);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(581, 20);
+            this.label7.Size = new System.Drawing.Size(570, 20);
             this.label7.TabIndex = 15;
-            this.label7.Text = "Or go to create campany let user llog in admin first";
+            this.label7.Text = "Or go to create campany let user log in admin first";
             // 
             // CompanyLoginFormUC
             // 

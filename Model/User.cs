@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace ShortCourseTraining.Model
 {
@@ -18,16 +19,17 @@ namespace ShortCourseTraining.Model
         [Required]
         [PasswordPropertyText]
         public string Password { get; set; }
-        public string  Gender { get; set; }
-        public string Description { get; set; }
+
+        public string Gender { get; set; } = "U/N";
+        public string Description { get; set; } = "U/N";
         [Required]
         [Phone]
-        public string PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; } = "U/N";
         [EmailAddress]
-        public string Email { get; set; }
-        public Image Photo { get; set; }
+        public string Email { get; set; } = "U/N";
+        public Image Photo { get; set; } 
         public DateTime CreatedDate { get; set; }
-        public bool Status { get; set; }
+        public bool Status { get; set; } = false;
         public UserRole UserRole { get; set; }
     }
 }

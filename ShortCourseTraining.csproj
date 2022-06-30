@@ -69,16 +69,22 @@
     <Compile Include="TESTER.Designer.cs">
       <DependentUpon>TESTER.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\AdminSignUpUC.cs">
+    <Compile Include="UserControls\Company\AddAdminCompany.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\AdminSignUpUC.Designer.cs">
+    <Compile Include="UserControls\Company\AddAdminCompany.Designer.cs">
+      <DependentUpon>AddAdminCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\User\AdminSignUpUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\User\AdminSignUpUC.Designer.cs">
       <DependentUpon>AdminSignUpUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\CompanyLoginFormUC.cs">
+    <Compile Include="UserControls\Company\CompanyLoginFormUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\CompanyLoginFormUC.Designer.cs">
+    <Compile Include="UserControls\Company\CompanyLoginFormUC.Designer.cs">
       <DependentUpon>CompanyLoginFormUC.cs</DependentUpon>
     </Compile>
     <Compile Include="LogInForm.cs">
@@ -87,10 +93,10 @@
     <Compile Include="LogInForm.Designer.cs">
       <DependentUpon>LogInForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\CreateCompany.cs">
+    <Compile Include="UserControls\Company\CreateCompany.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\CreateCompany.Designer.cs">
+    <Compile Include="UserControls\Company\CreateCompany.Designer.cs">
       <DependentUpon>CreateCompany.cs</DependentUpon>
     </Compile>
     <Compile Include="WelcomeForm.cs">
@@ -109,16 +115,19 @@
     <EmbeddedResource Include="TESTER.resx">
       <DependentUpon>TESTER.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\AdminSignUpUC.resx">
+    <EmbeddedResource Include="UserControls\Company\AddAdminCompany.resx">
+      <DependentUpon>AddAdminCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\User\AdminSignUpUC.resx">
       <DependentUpon>AdminSignUpUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\CompanyLoginFormUC.resx">
+    <EmbeddedResource Include="UserControls\Company\CompanyLoginFormUC.resx">
       <DependentUpon>CompanyLoginFormUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogInForm.resx">
       <DependentUpon>LogInForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\CreateCompany.resx">
+    <EmbeddedResource Include="UserControls\Company\CreateCompany.resx">
       <DependentUpon>CreateCompany.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomeForm.resx">

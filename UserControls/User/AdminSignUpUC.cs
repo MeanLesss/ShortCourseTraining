@@ -11,8 +11,10 @@ using System.Data.OleDb;
 using System.Configuration;
 using System.IO;
 using System.Drawing.Imaging;
+using System.Windows;
 using ShortCourseTraining.Database;
 using ShortCourseTraining.Model;
+using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace ShortCourseTraining
 {
@@ -54,6 +56,15 @@ namespace ShortCourseTraining
 
         private void ButtonCancel_Click(object sender, EventArgs e)
         {
+            textBoxConfirmPass.Clear();
+            textBoxDescription.Clear();
+            textBoxEmail.Clear();
+            textBoxPassword.Clear();
+            textBoxPhone.Clear();
+            PictureBoxAdmin.ResetImeMode();
+            textBoxUsername.Clear();
+            radioButtonFemale.Checked = false;
+            radioButtonMale.Checked = false;
             this.Hide();
         }
 

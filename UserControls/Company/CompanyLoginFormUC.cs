@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ShortCourseTraining.Database;
+using ShortCourseTraining.UserControls;
 
 namespace ShortCourseTraining
 {
@@ -37,12 +38,16 @@ namespace ShortCourseTraining
 
         private void ButtonBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            _panel.Controls.Remove(this);
         }
-
-        private void linkLabelCreateComapny_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        
+        private void linkLabelCreateCompany_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            CreateCompany company = new CreateCompany(_panel);
+            _panel.Controls.Add(company);
+            company.Show();
+            company.BringToFront();
+            _panel.Controls.Remove(this);
         }
 
         private void ButtonLogIn_Click(object sender, EventArgs e)
@@ -70,5 +75,6 @@ namespace ShortCourseTraining
             adminSignUpUC.Show();
             adminSignUpUC.BringToFront();
         }
+
     }
 }
