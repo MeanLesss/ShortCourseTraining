@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ButtonCompany = new FontAwesome.Sharp.IconButton();
-            this.ButtonUser = new FontAwesome.Sharp.IconButton();
+            this.ButtonSchool = new FontAwesome.Sharp.IconButton();
+            this.ButtonStudent = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ButtonClose = new FontAwesome.Sharp.IconButton();
@@ -39,41 +39,42 @@
             this.panelWelcome.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ButtonCompany
+            // ButtonSchool
             // 
-            this.ButtonCompany.BackColor = System.Drawing.Color.Chocolate;
-            this.ButtonCompany.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonCompany.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonCompany.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.ButtonCompany.IconColor = System.Drawing.Color.Black;
-            this.ButtonCompany.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ButtonCompany.IconSize = 80;
-            this.ButtonCompany.Location = new System.Drawing.Point(121, 190);
-            this.ButtonCompany.Name = "ButtonCompany";
-            this.ButtonCompany.Size = new System.Drawing.Size(312, 190);
-            this.ButtonCompany.TabIndex = 0;
-            this.ButtonCompany.Text = "Company";
-            this.ButtonCompany.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ButtonCompany.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.ButtonCompany.UseVisualStyleBackColor = false;
-            this.ButtonCompany.Click += new System.EventHandler(this.ButtonCompany_Click);
+            this.ButtonSchool.BackColor = System.Drawing.Color.Chocolate;
+            this.ButtonSchool.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonSchool.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonSchool.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.ButtonSchool.IconColor = System.Drawing.Color.Black;
+            this.ButtonSchool.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ButtonSchool.IconSize = 80;
+            this.ButtonSchool.Location = new System.Drawing.Point(121, 190);
+            this.ButtonSchool.Name = "ButtonSchool";
+            this.ButtonSchool.Size = new System.Drawing.Size(312, 190);
+            this.ButtonSchool.TabIndex = 0;
+            this.ButtonSchool.Text = "School";
+            this.ButtonSchool.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ButtonSchool.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ButtonSchool.UseVisualStyleBackColor = false;
+            this.ButtonSchool.Click += new System.EventHandler(this.ButtonSchool_Click);
             // 
-            // ButtonUser
+            // ButtonStudent
             // 
-            this.ButtonUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonUser.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonUser.IconChar = FontAwesome.Sharp.IconChar.Users;
-            this.ButtonUser.IconColor = System.Drawing.Color.Chocolate;
-            this.ButtonUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ButtonUser.IconSize = 80;
-            this.ButtonUser.Location = new System.Drawing.Point(573, 190);
-            this.ButtonUser.Name = "ButtonUser";
-            this.ButtonUser.Size = new System.Drawing.Size(312, 190);
-            this.ButtonUser.TabIndex = 2;
-            this.ButtonUser.Text = "User";
-            this.ButtonUser.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ButtonUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.ButtonUser.UseVisualStyleBackColor = true;
+            this.ButtonStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonStudent.Font = new System.Drawing.Font("Open Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonStudent.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.ButtonStudent.IconColor = System.Drawing.Color.Chocolate;
+            this.ButtonStudent.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ButtonStudent.IconSize = 80;
+            this.ButtonStudent.Location = new System.Drawing.Point(573, 190);
+            this.ButtonStudent.Name = "ButtonStudent";
+            this.ButtonStudent.Size = new System.Drawing.Size(312, 190);
+            this.ButtonStudent.TabIndex = 2;
+            this.ButtonStudent.Text = "Student / Teacher";
+            this.ButtonStudent.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ButtonStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ButtonStudent.UseVisualStyleBackColor = true;
+            this.ButtonStudent.Click += new System.EventHandler(this.ButtonStudent_Click);
             // 
             // label1
             // 
@@ -140,8 +141,8 @@
             // 
             this.panelWelcome.Controls.Add(this.label3);
             this.panelWelcome.Controls.Add(this.label1);
-            this.panelWelcome.Controls.Add(this.ButtonCompany);
-            this.panelWelcome.Controls.Add(this.ButtonUser);
+            this.panelWelcome.Controls.Add(this.ButtonSchool);
+            this.panelWelcome.Controls.Add(this.ButtonStudent);
             this.panelWelcome.Controls.Add(this.label2);
             this.panelWelcome.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelWelcome.Location = new System.Drawing.Point(0, 46);
@@ -182,8 +183,8 @@
 
         #endregion
 
-        private FontAwesome.Sharp.IconButton ButtonCompany;
-        private FontAwesome.Sharp.IconButton ButtonUser;
+        private FontAwesome.Sharp.IconButton ButtonSchool;
+        private FontAwesome.Sharp.IconButton ButtonStudent;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton ButtonClose;

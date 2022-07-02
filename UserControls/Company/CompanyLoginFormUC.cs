@@ -15,15 +15,17 @@ namespace ShortCourseTraining
     public partial class CompanyLoginFormUC : UserControl
     {
         Panel _panel;
+        Form _form;
         public CompanyLoginFormUC()
         {
             InitializeComponent();
         }
         
-        public CompanyLoginFormUC(Panel welcomePanel)
+        public CompanyLoginFormUC(Panel welcomePanel,Form form)
         {
             InitializeComponent();
             _panel = welcomePanel;
+            _form = form;
 
         }
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -59,6 +61,7 @@ namespace ShortCourseTraining
                 //MessageBox.Show(user.Username+ user.Password);
                 //new TESTER(user).Show();
                 new DashBoardAdmin(user).Show();
+                _form.Hide();
             }
             else
             {
