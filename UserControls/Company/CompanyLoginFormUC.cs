@@ -56,8 +56,9 @@ namespace ShortCourseTraining
             var user = authentication.AdminAuthentication(textBoxUsername.Text, textBoxPassword.Text);
             if (user != null)
             {
-                MessageBox.Show(user.Username+ user.Password);
-                new TESTER(user).Show();
+                //MessageBox.Show(user.Username+ user.Password);
+                //new TESTER(user).Show();
+                new DashBoardAdmin(user).Show();
             }
             else
             {

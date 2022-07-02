@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ShortCourseTraining.Model;
+using System;
 using System.Configuration;
-using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using ShortCourseTraining.Model;
 
 namespace ShortCourseTraining.Database
 {
@@ -102,7 +97,7 @@ VALUES(@CompanyID,@Username,@Gender,@Password,@Description,@Phone,@Email,@Photo,
                     command.ExecuteNonQuery();
                 }
 
-                using (conn = new OleDbConnection(cs))
+                /*using (conn = new OleDbConnection(cs))
                 {
                     conn.Open();
                     string insertRole = @"SELECT u.ID FROM Users u WHERE u.Username = '" + user.Username + "'";
@@ -114,21 +109,22 @@ VALUES(@CompanyID,@Username,@Gender,@Password,@Description,@Phone,@Email,@Photo,
 
                     adapter.Fill(dt);
                     user.UserID = int.Parse(dt.Rows[0][0].ToString());
-                }
+                }*/
 
                 using (conn = new OleDbConnection(cs))
                 {
                     conn.Open();
                     //then add the user to the UserRole in DB as an insert query 'Admin' here SELECT u.ID FROM Users u WHERE u.Username = '" + user.Username + "') AS 
-                    string insertRole = @"INSERT INTO UserRole(UserID, Role, CanRead, CanWrite, CanUpdate, CanDelete )
-                                        VALUES(" + user.UserID + ",'Admin',True,True,True,True)";
-                    /* string insertRole = @"INSERT INTO UserRole(UserID, Role, CanRead, CanWrite, CanUpdate, CanDelete )
-                                        SELECT (SELECT u.ID FROM Users u WHERE u.Username = '" + user.Username + "')," +
+                    /*string insertRole = @"INSERT INTO UserRole(UserID, Role, CanRead, CanWrite, CanUpdate, CanDelete )
+                                        VALUES(" + user.UserID + ",'Admin',True,True,True,True)";*/
+                     string insertRole = @"INSERT INTO UserRole(UserID, Role, CanRead, CanWrite, CanUpdate, CanDelete )
+                                        SELECT top 1 (SELECT u.ID FROM Users u WHERE u.Username = '" + user.Username + "')," +
                                         "'Admin', " +
                                         "True , " +
                                         "True ," +
                                         "True ," +
-                                        "True FROM UserRole;";*/
+                                        "True FROM UserRole;";
+
                     //more query here
                     command = new OleDbCommand(insertRole, conn);
                     command.ExecuteNonQuery();

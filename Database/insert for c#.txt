@@ -21,3 +21,14 @@ using (SqlConnection connection = new SqlConnection(connectionString))
     command.Parameters.Add(@Province, SqlDbType.VarChar,50).Value = this.comboBox4.Text; //You should name this combo box
     command.Parameters.Add(@City, SqlDbType.VarChar,50).Value = this.comboBox3.Text;//You should name this combo box
 }
+
+string commandText = "INSERT INTO dbo.student (FirstName, LastName, FatherName, Email, DateBirth,DateReg, Adress, Gender, Specialization, Country, Province,City) " +
+                     "SELECT @FirstName,@LastName, @Fathername, @Email, @DateBirth, @DateReg, @Address, @Gender, s.specialization_id, c.country_id, p.province_id, cy.city_id " +
+                     "FROM (SELECT specialization_id FROM dbo.specialization WHERE SpecializationName = @Specialization) s " +
+                     "CROSS APPLY (select country_id from country where CountryName = @Country) c " +
+                     "CROSS APPLY (select province_id from province where ProvinceName = @Province) p " +
+                     "CROSS APPLY (select city_id from city where CityName = @City) cy;";
+
+INSERT INTO UserRole(UserID, Role, CanRead, CanWrite, CanUpdate, CanDelete )
+SELECT(SELECT u.ID FROM Users u WHERE u.Username = '" + user.Username + "'),'Admin', True , True , True ,True 
+FROM UserRole ur WHERE  

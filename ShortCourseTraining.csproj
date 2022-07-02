@@ -61,8 +61,17 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DashBoardAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoardAdmin.Designer.cs">
+      <DependentUpon>DashBoardAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database\DatabaseManager.cs" />
     <Compile Include="Database\UserAuthentication.cs" />
+    <Compile Include="Model\RoundPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="TESTER.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +108,12 @@
     <Compile Include="UserControls\Company\CreateCompany.Designer.cs">
       <DependentUpon>CreateCompany.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\User\UserBanner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\User\UserBanner.Designer.cs">
+      <DependentUpon>UserBanner.cs</DependentUpon>
+    </Compile>
     <Compile Include="WelcomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +127,9 @@
     <Compile Include="Model\UserRole.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DashBoardAdmin.resx">
+      <DependentUpon>DashBoardAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TESTER.resx">
       <DependentUpon>TESTER.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +148,9 @@
     <EmbeddedResource Include="UserControls\Company\CreateCompany.resx">
       <DependentUpon>CreateCompany.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\User\UserBanner.resx">
+      <DependentUpon>UserBanner.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WelcomeForm.resx">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,6 +162,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -156,6 +178,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="1.jpg" />
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
