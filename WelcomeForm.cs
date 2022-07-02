@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Configuration;
+using System.Windows.Input;
+using ShortCourseTraining.Model;
+using MouseEventArgs = System.Windows.Forms.MouseEventArgs;
 
 namespace ShortCourseTraining
 {
@@ -62,14 +65,6 @@ namespace ShortCourseTraining
             WindowState = FormWindowState.Minimized;
         }
 
-        private void WelcomeForm_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                //ClassLibrary1.Draggable.Move(this);
-            }
-        }
-
         private void ButtonCompany_Click(object sender, EventArgs e)
         {
             /* LogInForm logInForm = new LogInForm();
@@ -79,6 +74,29 @@ namespace ShortCourseTraining
             companyLoginFormUC.Show();
             companyLoginFormUC.BringToFront();
             
+        }
+
+        //window move area
+
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+        private void panelWelcome_MouseDown(object sender, MouseEventArgs e)
+        {
+            
+            if (e.Button == MouseButtons.Left)
+            {
+                NativeMethod.ReleaseCapture();
+                NativeMethod.SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
+        private void WelcomeForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                NativeMethod.ReleaseCapture();
+                NativeMethod.SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
         }
     }
 }

@@ -12,6 +12,19 @@ namespace ShortCourseTraining.UserControls.User
             InitializeComponent();
         }
 
+        private const int CS_DropShadow = 0x00020000;
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                var cp = base.CreateParams;
+                cp.ClassStyle = CS_DropShadow;
+                return cp;
+            }
+        }
+
+
         private void UserBanner_Load(object sender, System.EventArgs e)
         {
             roundPictureBox1.Image = _user.Photo;

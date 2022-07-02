@@ -148,6 +148,7 @@
             this.panelWelcome.Name = "panelWelcome";
             this.panelWelcome.Size = new System.Drawing.Size(1000, 454);
             this.panelWelcome.TabIndex = 7;
+            this.panelWelcome.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelWelcome_MouseDown);
             // 
             // label3
             // 
@@ -172,7 +173,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Short Course";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.WelcomeForm_MouseMove);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WelcomeForm_MouseDown);
             this.panelWelcome.ResumeLayout(false);
             this.panelWelcome.PerformLayout();
             this.ResumeLayout(false);

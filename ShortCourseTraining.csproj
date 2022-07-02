@@ -69,6 +69,7 @@
     </Compile>
     <Compile Include="Database\DatabaseManager.cs" />
     <Compile Include="Database\UserAuthentication.cs" />
+    <Compile Include="Model\NativeMethod.cs" />
     <Compile Include="Model\RoundPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -179,8 +180,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="1.jpg" />
     <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HoneyCompBackground.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -28,5 +28,15 @@ namespace ShortCourseTraining
             panelOption.Controls.Add(banner);
             banner.Show();
         }
+
+        private void ButtonLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void DashBoardAdmin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
