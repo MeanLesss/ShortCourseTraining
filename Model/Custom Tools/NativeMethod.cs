@@ -9,8 +9,8 @@ namespace ShortCourseTraining.Model
 {
     public class NativeMethod
     {
-        [System.Runtime.InteropServices.DllImport("Gdi32.dll",EntryPoint = "CreateRoundRectangle")]
-        public static extern IntPtr CreateRoundRectangle
+        [System.Runtime.InteropServices.DllImport("Gdi32.dll",EntryPoint = "CreateRoundRectRgn")]
+        public static extern IntPtr CreateRoundRectRgn
         (
             int nLeftRect, 
             int nTopRect, 

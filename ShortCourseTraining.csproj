@@ -69,8 +69,11 @@
     </Compile>
     <Compile Include="Database\DatabaseManager.cs" />
     <Compile Include="Database\UserAuthentication.cs" />
-    <Compile Include="Model\NativeMethod.cs" />
-    <Compile Include="Model\RoundPictureBox.cs">
+    <Compile Include="Model\Custom Tools\RJButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Custom Tools\NativeMethod.cs" />
+    <Compile Include="Model\Custom Tools\RoundPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="TESTER.cs">
@@ -84,6 +87,12 @@
     </Compile>
     <Compile Include="UserControls\Company\AddAdminCompany.Designer.cs">
       <DependentUpon>AddAdminCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DisplayControls\Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DisplayControls\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\User\AdminSignUpUC.cs">
       <SubType>UserControl</SubType>
@@ -137,6 +146,9 @@
     <EmbeddedResource Include="UserControls\Company\AddAdminCompany.resx">
       <DependentUpon>AddAdminCompany.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DisplayControls\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\User\AdminSignUpUC.resx">
       <DependentUpon>AdminSignUpUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,5 +197,6 @@
   <ItemGroup>
     <None Include="HoneyCompBackground.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

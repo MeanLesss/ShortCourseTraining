@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ShortCourseTraining.Model;
+using ShortCourseTraining.UserControls.DisplayControls;
 using ShortCourseTraining.UserControls.User;
 
 namespace ShortCourseTraining
@@ -101,6 +102,14 @@ namespace ShortCourseTraining
                 iconButtonPrivacy
             };
             ButtonRetraction(suButtons);
+        }
+
+        private void iconButtonDashBoard_Click(object sender, EventArgs e)
+        {
+            var dashboard = new Dashboard();
+            panelDisplayOption.Controls.Add(dashboard);
+            dashboard.Dock = DockStyle.Fill;
+            dashboard.Show();
         }
     }
 }
