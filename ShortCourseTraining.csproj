@@ -88,6 +88,12 @@
     <Compile Include="UserControls\Company\AddAdminCompany.Designer.cs">
       <DependentUpon>AddAdminCompany.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\DisplayControls\Cards\StaticCountCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DisplayControls\Cards\StaticCountCard.Designer.cs">
+      <DependentUpon>StaticCountCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\DisplayControls\Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     <EmbeddedResource Include="UserControls\Company\AddAdminCompany.resx">
       <DependentUpon>AddAdminCompany.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DisplayControls\Cards\StaticCountCard.resx">
+      <DependentUpon>StaticCountCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DisplayControls\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +206,14 @@
   <ItemGroup>
     <None Include="HoneyCompBackground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\circleBorder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circleBorder1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Border2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

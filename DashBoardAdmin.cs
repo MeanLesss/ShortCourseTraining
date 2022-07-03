@@ -29,6 +29,11 @@ namespace ShortCourseTraining
             banner.Dock = DockStyle.Top;
             panelOption.Controls.Add(banner);
             banner.Show();
+
+            var dashboard = new Dashboard();
+            panelDisplayOption.Controls.Add(dashboard);
+            dashboard.Dock = DockStyle.Fill;
+            dashboard.Show();
         }
 
         private void ButtonLogOut_Click(object sender, EventArgs e)
@@ -106,6 +111,7 @@ namespace ShortCourseTraining
 
         private void iconButtonDashBoard_Click(object sender, EventArgs e)
         {
+            panelDisplayOption.Controls.Clear();
             var dashboard = new Dashboard();
             panelDisplayOption.Controls.Add(dashboard);
             dashboard.Dock = DockStyle.Fill;

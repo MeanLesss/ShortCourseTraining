@@ -73,6 +73,36 @@ namespace ShortCourseTraining.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Border2 {
+            get {
+                object obj = ResourceManager.GetObject("Border2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap circleBorder {
+            get {
+                object obj = ResourceManager.GetObject("circleBorder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap circleBorder1 {
+            get {
+                object obj = ResourceManager.GetObject("circleBorder1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap HoneyCompBackground {
             get {
                 object obj = ResourceManager.GetObject("HoneyCompBackground", resourceCulture);

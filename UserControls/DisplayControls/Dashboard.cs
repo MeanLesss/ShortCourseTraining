@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ShortCourseTraining.Model;
+using ShortCourseTraining.UserControls.DisplayControls.Cards;
 
 namespace ShortCourseTraining.UserControls.DisplayControls
 {
@@ -20,14 +21,15 @@ namespace ShortCourseTraining.UserControls.DisplayControls
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            
+            var teacherStatic = new StaticCountCard("Teacher",12);
+            var studentStatic = new StaticCountCard("Student",1000);
+            var onlineStatic = new StaticCountCard("Online",20);
+            flowLayoutStatic.Controls.Add(teacherStatic);
+            flowLayoutStatic.Controls.Add(studentStatic);
+            flowLayoutStatic.Controls.Add(onlineStatic);
+            teacherStatic.Show();
+            studentStatic.Show();
+            onlineStatic.Show();
         }
-
-        /*private void panel1_Paint_1(object sender, PaintEventArgs e)
-        {
-            var ptr = NativeMethod.CreateRoundRectRgn(15, 15, panel1.Width, panel1.Height, 40, 40);
-            panel1.Region = Region.FromHrgn(ptr);
-            NativeMethod.DeleteObject(ptr);
-        }*/
     }
 }
