@@ -378,6 +378,7 @@
             this.iconButtonAddCourses.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButtonAddCourses.UseVisualStyleBackColor = false;
             this.iconButtonAddCourses.Visible = false;
+            this.iconButtonAddCourses.Click += new System.EventHandler(this.iconButtonAddCourses_Click);
             // 
             // iconButtonAllCourses
             // 
@@ -399,6 +400,7 @@
             this.iconButtonAllCourses.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButtonAllCourses.UseVisualStyleBackColor = false;
             this.iconButtonAllCourses.Visible = false;
+            this.iconButtonAllCourses.Click += new System.EventHandler(this.iconButtonAllCourses_Click);
             // 
             // iconButtonCourse
             // 

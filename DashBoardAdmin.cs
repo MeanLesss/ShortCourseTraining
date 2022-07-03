@@ -62,60 +62,72 @@ namespace ShortCourseTraining
         }
         private void iconButtonCourse_Click(object sender, EventArgs e)
         {
-            suButtons = new List<Button>
+            ButtonRetraction(new List<Button>
             {
                 iconButtonAddCourses,
                 iconButtonAllCourses
-            };
-            ButtonRetraction(suButtons);
+            });
         }
         private void iconButtonTeacher_Click(object sender, EventArgs e)
         {
-            suButtons = new List<Button>
+            ButtonRetraction(new List<Button>
             {
                 iconButtonAddTeacher,
                 iconButtonAllTeacher
-            };
-            ButtonRetraction(suButtons);
+            });
         }
 
         private void iconButtonSubject_Click(object sender, EventArgs e)
         {
-            suButtons = new List<Button>
+            ButtonRetraction(new List<Button>
             {
                 iconButtonAddSubject,
                 iconButtonAllSubject
-            };
-            ButtonRetraction(suButtons);
+            });
         }
 
         private void iconButtonStudent_Click(object sender, EventArgs e)
         {
-            suButtons = new List<Button>
+            ButtonRetraction(new List<Button>
             {
                 iconButtonAddStudent,
                 iconButtonAllStudent
-            };
-            ButtonRetraction(suButtons);
+            });
         }
 
         private void iconButtonSetting_Click(object sender, EventArgs e)
         {
-            suButtons = new List<Button>
+            ButtonRetraction(new List<Button>
             {
                 iconButtonUserInfo,
                 iconButtonPrivacy
-            };
-            ButtonRetraction(suButtons);
+            });
         }
 
+        //display panel
+        private void DisplayControls(UserControl userControl)
+        {
+            var uc = userControl;
+            panelDisplayOption.Controls.Clear();
+            panelDisplayOption.Controls.Add(uc);
+            uc.Dock = DockStyle.Fill;
+            uc.Show();
+        }
         private void iconButtonDashBoard_Click(object sender, EventArgs e)
         {
-            panelDisplayOption.Controls.Clear();
-            var dashboard = new Dashboard();
-            panelDisplayOption.Controls.Add(dashboard);
-            dashboard.Dock = DockStyle.Fill;
-            dashboard.Show();
+            DisplayControls(new Dashboard());
         }
+
+        private void iconButtonAllCourses_Click(object sender, EventArgs e)
+        {
+            DisplayControls(new AllCourses());
+        }
+
+        private void iconButtonAddCourses_Click(object sender, EventArgs e)
+        {
+            DisplayControls(new AddCourses());
+        }
+
+
     }
 }

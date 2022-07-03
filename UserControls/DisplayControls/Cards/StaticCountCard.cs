@@ -33,7 +33,6 @@ namespace ShortCourseTraining.UserControls.DisplayControls.Cards
             NativeMethod.DeleteObject(ptr);
             labelTitle.Text = _title;
             labelCount.Text = _count;
-
             
         }
     }
