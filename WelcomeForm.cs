@@ -1,6 +1,7 @@
 ﻿using ShortCourseTraining.Model;
 using System;
 using System.Windows.Forms;
+using ShortCourseTraining.UserControls.User;
 using MouseEventArgs = System.Windows.Forms.MouseEventArgs;
 
 namespace ShortCourseTraining
@@ -76,7 +77,7 @@ namespace ShortCourseTraining
         {
             /* LogInForm logInForm = new LogInForm();
              logInForm.Show();*/
-            CompanyLoginFormUC companyLoginFormUC = new CompanyLoginFormUC(panelWelcome,this);
+            var companyLoginFormUC = new CompanyLoginFormUC(panelWelcome,this);
             panelWelcome.Controls.Add(companyLoginFormUC);
             companyLoginFormUC.Show();
             companyLoginFormUC.BringToFront();
@@ -84,7 +85,10 @@ namespace ShortCourseTraining
 
         private void ButtonStudent_Click(object sender, EventArgs e)
         {
-
+            var userLoginFormUC = new UserLoginForm(panelWelcome, this);
+            panelWelcome.Controls.Add(userLoginFormUC);
+            userLoginFormUC.Show();
+            userLoginFormUC.BringToFront();
         }
     }
 }

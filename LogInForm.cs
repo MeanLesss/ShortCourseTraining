@@ -18,37 +18,9 @@ namespace ShortCourseTraining
         {
             InitializeComponent();
         }
-
-        OleDbConnection conn = null;
-        string cs = "";
-        DataSet ds = null;
-        OleDbDataAdapter da = null;
-        OleDbCommandBuilder cmdBuilder = null;
         private void LogInForm_Load(object sender, EventArgs e)
         {
-            conn = new OleDbConnection();
-            cs = ConfigurationManager.ConnectionStrings["ShortCourseDB"].ConnectionString;
-            conn.ConnectionString = cs;
-
-            try
-            {
-                conn.Open();
-                MessageBox.Show("okay : " + conn.Database.ToString());
-                conn.Close();
-
-                ds = new DataSet();
-
-                da = new OleDbDataAdapter("select * from companies", conn);
-                //cmdBuilder = new OleDbCommandBuilder(da);
-                da.Fill(ds, "Companies");
-                dataGridView1.DataSource = ds.Tables["Companies"];
-                //close the connection
-                conn.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("error : " + ex.Message);
-            }
+            
         }
     }
 }

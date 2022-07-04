@@ -8,25 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ShortCourseTraining.Database;
-using ShortCourseTraining.UserControls;
 
-namespace ShortCourseTraining
+namespace ShortCourseTraining.UserControls.User
 {
-    public partial class CompanyLoginFormUC : UserControl
+    public partial class UserLoginForm : UserControl
     {
         readonly Panel _panel;
         readonly Form _form;
-        public CompanyLoginFormUC()
+        public UserLoginForm()
         {
             InitializeComponent();
         }
-        
-        public CompanyLoginFormUC(Panel welcomePanel,Form form)
+        public UserLoginForm(Panel welcomePanel, Form form)
         {
             InitializeComponent();
             _panel = welcomePanel;
             _form = form;
-
         }
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
@@ -38,28 +35,17 @@ namespace ShortCourseTraining
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
-        private void ButtonBack_Click(object sender, EventArgs e)
+        private void ButtonCancel_Click(object sender, EventArgs e)
         {
-            _panel.Controls.Remove(this);
-        }
-        
-        private void linkLabelCreateCompany_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            CreateCompany company = new CreateCompany(_panel);
-            _panel.Controls.Add(company);
-            company.Show();
-            company.BringToFront();
             _panel.Controls.Remove(this);
         }
 
         private void ButtonLogIn_Click(object sender, EventArgs e)
         {
             UserAuthentication authentication = new UserAuthentication();
-            var user = authentication.AdminAuthentication(textBoxUsername.Text, textBoxPassword.Text);
+            var user = authentication.STAuthentication(textBoxUsername.Text, textBoxPassword.Text);
             if (user != null)
             {
-                //MessageBox.Show(user.Username+ user.Password);
-                //new TESTER(user).Show();
                 new DashBoardAdmin(user).Show();
                 _form.Hide();
             }
@@ -69,16 +55,11 @@ namespace ShortCourseTraining
                     MessageBoxIcon.Error);
 
             }
-
         }
 
-        private void ButtonSignUp_Click(object sender, EventArgs e)
+        private void linkLabelForgetPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            AdminSignUpUC adminSignUpUC = new AdminSignUpUC();
-            _panel.Controls.Add(adminSignUpUC);
-            adminSignUpUC.Show();
-            adminSignUpUC.BringToFront();
-        }
 
+        }
     }
 }
