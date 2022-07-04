@@ -189,6 +189,7 @@
             this.iconButtonAddStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButtonAddStudent.UseVisualStyleBackColor = false;
             this.iconButtonAddStudent.Visible = false;
+            this.iconButtonAddStudent.Click += new System.EventHandler(this.iconButtonAddStudent_Click);
             // 
             // iconButtonAllStudent
             // 
@@ -252,6 +253,7 @@
             this.iconButtonAddSubject.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButtonAddSubject.UseVisualStyleBackColor = false;
             this.iconButtonAddSubject.Visible = false;
+            this.iconButtonAddSubject.Click += new System.EventHandler(this.iconButtonAddSubject_Click);
             // 
             // iconButtonAllSubject
             // 
@@ -315,6 +317,7 @@
             this.iconButtonAddTeacher.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButtonAddTeacher.UseVisualStyleBackColor = false;
             this.iconButtonAddTeacher.Visible = false;
+            this.iconButtonAddTeacher.Click += new System.EventHandler(this.iconButtonAddTeacher_Click);
             // 
             // iconButtonAllTeacher
             // 
@@ -336,6 +339,7 @@
             this.iconButtonAllTeacher.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButtonAllTeacher.UseVisualStyleBackColor = false;
             this.iconButtonAllTeacher.Visible = false;
+            this.iconButtonAllTeacher.Click += new System.EventHandler(this.iconButtonAllTeacher_Click);
             // 
             // iconButtonTeacher
             // 

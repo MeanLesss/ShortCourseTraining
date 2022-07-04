@@ -88,11 +88,29 @@
     <Compile Include="UserControls\Company\AddAdminCompany.Designer.cs">
       <DependentUpon>AddAdminCompany.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\DisplayControls\Add Student.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DisplayControls\Add Student.Designer.cs">
+      <DependentUpon>Add Student.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\DisplayControls\AddCourses.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\DisplayControls\AddCourses.Designer.cs">
       <DependentUpon>AddCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DisplayControls\AddSubject.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DisplayControls\AddSubject.Designer.cs">
+      <DependentUpon>AddSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DisplayControls\AddTeacher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DisplayControls\AddTeacher.Designer.cs">
+      <DependentUpon>AddTeacher.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\DisplayControls\AllCourses.cs">
       <SubType>UserControl</SubType>
@@ -164,8 +182,17 @@
     <EmbeddedResource Include="UserControls\Company\AddAdminCompany.resx">
       <DependentUpon>AddAdminCompany.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DisplayControls\Add Student.resx">
+      <DependentUpon>Add Student.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DisplayControls\AddCourses.resx">
       <DependentUpon>AddCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DisplayControls\AddSubject.resx">
+      <DependentUpon>AddSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DisplayControls\AddTeacher.resx">
+      <DependentUpon>AddTeacher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DisplayControls\AllCourses.resx">
       <DependentUpon>AllCourses.cs</DependentUpon>

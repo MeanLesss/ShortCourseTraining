@@ -15,8 +15,7 @@ namespace ShortCourseTraining
 {
     public partial class DashBoardAdmin : Form
     {
-        private User _user = null;
-        private List<Button> suButtons;
+        private readonly User _user = null;
         public DashBoardAdmin(User user)
         {
             InitializeComponent();
@@ -57,7 +56,6 @@ namespace ShortCourseTraining
             else
             {
                 subButtons.ForEach(x => x.Visible = true);
-
             }
         }
         private void iconButtonCourse_Click(object sender, EventArgs e)
@@ -128,6 +126,24 @@ namespace ShortCourseTraining
             DisplayControls(new AddCourses());
         }
 
+        private void iconButtonAddTeacher_Click(object sender, EventArgs e)
+        {
+            DisplayControls(new AddTeacher());
+        }
 
+        private void iconButtonAllTeacher_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButtonAddSubject_Click(object sender, EventArgs e)
+        {
+            DisplayControls(new AddSubject());
+        }
+
+        private void iconButtonAddStudent_Click(object sender, EventArgs e)
+        {
+            DisplayControls(new Add_Student());
+        }
     }
 }

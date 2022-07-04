@@ -160,7 +160,7 @@ namespace ShortCourseTraining
             this.PictureBoxAdmin.IconSize = 168;
             this.PictureBoxAdmin.Location = new System.Drawing.Point(635, 8);
             this.PictureBoxAdmin.Name = "PictureBoxAdmin";
-            this.PictureBoxAdmin.Size = new System.Drawing.Size(168, 177);
+            this.PictureBoxAdmin.Size = new System.Drawing.Size(168, 191);
             this.PictureBoxAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBoxAdmin.TabIndex = 25;
             this.PictureBoxAdmin.TabStop = false;
