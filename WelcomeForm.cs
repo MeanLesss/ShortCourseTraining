@@ -90,5 +90,23 @@ namespace ShortCourseTraining
             userLoginFormUC.Show();
             userLoginFormUC.BringToFront();
         }
+
+        private void iconButtonInfo_Click(object sender, EventArgs e)
+        {
+            new AboutForm().Show();
+        }
+
+        private void iconButtonInfo_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show(@"Mid term project(Short Course Training
+Group : SS15
+Team name : (Project 7)
+-KANG Sokvimean
+-HIV Vandeth
+-Chhorn Phally
+-Lim Channara
+-Phin Chanveasna", iconButtonInfo);
+
+        }
     }
 }

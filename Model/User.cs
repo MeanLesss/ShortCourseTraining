@@ -21,6 +21,11 @@ namespace ShortCourseTraining.Model
         public string Password { get; set; }
 
         public string Gender { get; set; } = "U/N";
+        public DateTime DOB { get; set; }
+        public string BirthPlace { get; set; }
+        public string Address { get; set; }
+        public string ContactAddress { get; set; }
+        public string FamilyStatus { get; set; }
         public string Description { get; set; } = "U/N";
         [Required]
         [Phone]

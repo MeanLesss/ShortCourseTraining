@@ -86,7 +86,7 @@
             this.Controls.Add(this.flowLayoutPanelCards);
             this.Controls.Add(this.pictureBoxSchedule);
             this.Name = "StudentDashboardControl";
-            this.Size = new System.Drawing.Size(670, 454);
+            this.Size = new System.Drawing.Size(653, 437);
             this.Load += new System.EventHandler(this.StudentDashboardControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSchedule)).EndInit();
             this.ResumeLayout(false);

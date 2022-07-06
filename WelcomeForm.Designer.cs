@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ButtonSchool = new FontAwesome.Sharp.IconButton();
             this.ButtonStudent = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,6 +37,8 @@
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panelWelcome = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.iconButtonInfo = new FontAwesome.Sharp.IconButton();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panelWelcome.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,6 +142,7 @@
             // 
             // panelWelcome
             // 
+            this.panelWelcome.Controls.Add(this.iconButtonInfo);
             this.panelWelcome.Controls.Add(this.label3);
             this.panelWelcome.Controls.Add(this.label1);
             this.panelWelcome.Controls.Add(this.ButtonSchool);
@@ -160,6 +164,21 @@
             this.label3.Size = new System.Drawing.Size(205, 35);
             this.label3.TabIndex = 5;
             this.label3.Text = "Log in as ";
+            // 
+            // iconButtonInfo
+            // 
+            this.iconButtonInfo.FlatAppearance.BorderSize = 0;
+            this.iconButtonInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonInfo.IconChar = FontAwesome.Sharp.IconChar.InfoCircle;
+            this.iconButtonInfo.IconColor = System.Drawing.Color.Chocolate;
+            this.iconButtonInfo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonInfo.Location = new System.Drawing.Point(3, 3);
+            this.iconButtonInfo.Name = "iconButtonInfo";
+            this.iconButtonInfo.Size = new System.Drawing.Size(45, 47);
+            this.iconButtonInfo.TabIndex = 6;
+            this.iconButtonInfo.UseVisualStyleBackColor = true;
+            this.iconButtonInfo.Click += new System.EventHandler(this.iconButtonInfo_Click);
+            this.iconButtonInfo.MouseHover += new System.EventHandler(this.iconButtonInfo_MouseHover);
             // 
             // WelcomeForm
             // 
@@ -191,6 +210,8 @@
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Panel panelWelcome;
         private System.Windows.Forms.Label label3;
+        private FontAwesome.Sharp.IconButton iconButtonInfo;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

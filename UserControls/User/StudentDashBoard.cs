@@ -77,7 +77,11 @@ namespace ShortCourseTraining.UserControls.User
 
         private void iconButtonInfo_Click(object sender, System.EventArgs e)
         {
+            panelControls.Controls.Clear();
 
+            var stInfo = new StudentInfo(_user);
+            panelControls.Controls.Add(stInfo);
+            stInfo.Dock = DockStyle.Fill;
         }
 
         private void iconButtonSecurity_Click(object sender, System.EventArgs e)

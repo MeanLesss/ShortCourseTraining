@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace ShortCourseTraining
 {
-    public partial class LogInForm : Form
+    public partial class AboutForm : Form
     {
-        public LogInForm()
+        public AboutForm()
         {
             InitializeComponent();
         }
