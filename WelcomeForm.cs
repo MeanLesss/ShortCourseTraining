@@ -15,29 +15,7 @@ namespace ShortCourseTraining
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            /*conn = new OleDbConnection();
-                    cs = ConfigurationManager.ConnectionStrings["ShortCourseDB"].ConnectionString;
-                    conn.ConnectionString = cs;
-
-            try
-            {
-                conn.Open();
-                MessageBox.Show("okay : " + conn.Database.ToString());
-                conn.Close();
-
-                ds = new DataSet();
-
-                da = new OleDbDataAdapter("select * from companies", conn);
-                //cmdBuilder = new OleDbCommandBuilder(da);
-                da.Fill(ds,"Companies");
-               // dataGridViewTest.DataSource = ds.Tables["Companies"];
-                //close the connection
-                conn.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("error : " + ex.Message);
-            }*/
+            
         }
 
         private void ButtonClose_Click(object sender, EventArgs e)
