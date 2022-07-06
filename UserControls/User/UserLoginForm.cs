@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -46,14 +47,19 @@ namespace ShortCourseTraining.UserControls.User
             var user = authentication.STAuthentication(textBoxUsername.Text, textBoxPassword.Text);
             if (user != null)
             {
-                new DashBoardAdmin(user).Show();
-                _form.Hide();
+                //_panel.Controls.Clear();
+                _form.BackColor = Color.CornflowerBlue;
+                this.Hide();
+                var stDashboard = new StudentDashBoard(user,_panel,_form);
+                _panel.Controls.Add(stDashboard);
+
+                stDashboard.BringToFront();
+                stDashboard.Show();
             }
             else
             {
                 MessageBox.Show("Incorrect username or password!", "Login failed", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
-
             }
         }
 

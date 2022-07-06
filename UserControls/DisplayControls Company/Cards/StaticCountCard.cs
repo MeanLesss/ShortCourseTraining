@@ -15,6 +15,8 @@ namespace ShortCourseTraining.UserControls.DisplayControls.Cards
     {
         private string _title;
         private string _count;
+        public string Title { get; set; }
+        public string Count { get; set; }
         public StaticCountCard()
         {
             InitializeComponent();
@@ -33,7 +35,6 @@ namespace ShortCourseTraining.UserControls.DisplayControls.Cards
             NativeMethod.DeleteObject(ptr);
             labelTitle.Text = _title;
             labelCount.Text = _count;
-            
         }
     }
 }

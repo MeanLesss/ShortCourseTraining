@@ -108,7 +108,7 @@
             this.ButtonClose.FlatAppearance.BorderSize = 0;
             this.ButtonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonClose.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
-            this.ButtonClose.IconColor = System.Drawing.Color.Chocolate;
+            this.ButtonClose.IconColor = System.Drawing.Color.Tomato;
             this.ButtonClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ButtonClose.IconSize = 30;
             this.ButtonClose.Location = new System.Drawing.Point(950, 0);
@@ -128,7 +128,7 @@
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 30;
-            this.iconButton1.Location = new System.Drawing.Point(905, 0);
+            this.iconButton1.Location = new System.Drawing.Point(894, 0);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(50, 40);
             this.iconButton1.TabIndex = 6;

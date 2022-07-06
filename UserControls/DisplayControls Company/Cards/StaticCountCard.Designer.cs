@@ -60,15 +60,14 @@
             this.panelBorder.BackgroundImage = global::ShortCourseTraining.Properties.Resources.Border2;
             this.panelBorder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelBorder.Controls.Add(this.labelCount);
-            this.panelBorder.Location = new System.Drawing.Point(277, 3);
+            this.panelBorder.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelBorder.Location = new System.Drawing.Point(288, 0);
             this.panelBorder.Name = "panelBorder";
-            this.panelBorder.Size = new System.Drawing.Size(144, 144);
+            this.panelBorder.Size = new System.Drawing.Size(150, 150);
             this.panelBorder.TabIndex = 3;
             // 
             // labelCount
             // 
-            this.labelCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelCount.AutoSize = true;
             this.labelCount.BackColor = System.Drawing.Color.Transparent;
             this.labelCount.Font = new System.Drawing.Font("Gadugi", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -83,6 +82,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panelBorder);
             this.Controls.Add(this.labelTitle);

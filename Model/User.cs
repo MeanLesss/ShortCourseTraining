@@ -31,5 +31,12 @@ namespace ShortCourseTraining.Model
         public DateTime CreatedDate { get; set; }
         public bool Status { get; set; } = false;
         public UserRole UserRole { get; set; }
+
+        public int Classes { get; set; }
+        public int Score { get; set; } = 0;
+        public int FinalScore { get; set; } = 0;
+        public int AbsentCount { get; set; }
+        public int AttendanceCount { get; set; } = 0;
+        public DateTime AttendanceDate { get; set; } = DateTime.Now.Date;
     }
 }

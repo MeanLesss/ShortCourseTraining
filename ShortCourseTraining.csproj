@@ -97,47 +97,53 @@
     <Compile Include="UserControls\Company\AddAdminCompany.Designer.cs">
       <DependentUpon>AddAdminCompany.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\DisplayControls\Add Student.cs">
+    <Compile Include="UserControls\DisplayControls Company\Add Student.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\DisplayControls\Add Student.Designer.cs">
+    <Compile Include="UserControls\DisplayControls Company\Add Student.Designer.cs">
       <DependentUpon>Add Student.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\DisplayControls\AddCourses.cs">
+    <Compile Include="UserControls\DisplayControls Company\AddCourses.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\DisplayControls\AddCourses.Designer.cs">
+    <Compile Include="UserControls\DisplayControls Company\AddCourses.Designer.cs">
       <DependentUpon>AddCourses.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\DisplayControls\AddSubject.cs">
+    <Compile Include="UserControls\DisplayControls Company\AddSubject.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\DisplayControls\AddSubject.Designer.cs">
+    <Compile Include="UserControls\DisplayControls Company\AddSubject.Designer.cs">
       <DependentUpon>AddSubject.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\DisplayControls\AddTeacher.cs">
+    <Compile Include="UserControls\DisplayControls Company\AddTeacher.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\DisplayControls\AddTeacher.Designer.cs">
+    <Compile Include="UserControls\DisplayControls Company\AddTeacher.Designer.cs">
       <DependentUpon>AddTeacher.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\DisplayControls\AllCourses.cs">
+    <Compile Include="UserControls\DisplayControls Company\AllCourses.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\DisplayControls\AllCourses.Designer.cs">
+    <Compile Include="UserControls\DisplayControls Company\AllCourses.Designer.cs">
       <DependentUpon>AllCourses.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\DisplayControls\Cards\StaticCountCard.cs">
+    <Compile Include="UserControls\DisplayControls Company\Cards\StaticCountCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\DisplayControls\Cards\StaticCountCard.Designer.cs">
+    <Compile Include="UserControls\DisplayControls Company\Cards\StaticCountCard.Designer.cs">
       <DependentUpon>StaticCountCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\DisplayControls\Dashboard.cs">
+    <Compile Include="UserControls\DisplayControls Company\Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\DisplayControls\Dashboard.Designer.cs">
+    <Compile Include="UserControls\DisplayControls Company\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DisplayControlStudent\StudentDashboardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DisplayControlStudent\StudentDashboardControl.Designer.cs">
+      <DependentUpon>StudentDashboardControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\User\AdminSignUpUC.cs">
       <SubType>UserControl</SubType>
@@ -162,6 +168,12 @@
     </Compile>
     <Compile Include="UserControls\Company\CreateCompany.Designer.cs">
       <DependentUpon>CreateCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\User\StudentDashBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\User\StudentDashBoard.Designer.cs">
+      <DependentUpon>StudentDashBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\User\UserBanner.cs">
       <SubType>UserControl</SubType>
@@ -197,26 +209,29 @@
     <EmbeddedResource Include="UserControls\Company\AddAdminCompany.resx">
       <DependentUpon>AddAdminCompany.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\DisplayControls\Add Student.resx">
+    <EmbeddedResource Include="UserControls\DisplayControls Company\Add Student.resx">
       <DependentUpon>Add Student.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\DisplayControls\AddCourses.resx">
+    <EmbeddedResource Include="UserControls\DisplayControls Company\AddCourses.resx">
       <DependentUpon>AddCourses.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\DisplayControls\AddSubject.resx">
+    <EmbeddedResource Include="UserControls\DisplayControls Company\AddSubject.resx">
       <DependentUpon>AddSubject.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\DisplayControls\AddTeacher.resx">
+    <EmbeddedResource Include="UserControls\DisplayControls Company\AddTeacher.resx">
       <DependentUpon>AddTeacher.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\DisplayControls\AllCourses.resx">
+    <EmbeddedResource Include="UserControls\DisplayControls Company\AllCourses.resx">
       <DependentUpon>AllCourses.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\DisplayControls\Cards\StaticCountCard.resx">
+    <EmbeddedResource Include="UserControls\DisplayControls Company\Cards\StaticCountCard.resx">
       <DependentUpon>StaticCountCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\DisplayControls\Dashboard.resx">
+    <EmbeddedResource Include="UserControls\DisplayControls Company\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DisplayControlStudent\StudentDashboardControl.resx">
+      <DependentUpon>StudentDashboardControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\User\AdminSignUpUC.resx">
       <DependentUpon>AdminSignUpUC.cs</DependentUpon>
@@ -229,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Company\CreateCompany.resx">
       <DependentUpon>CreateCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\User\StudentDashBoard.resx">
+      <DependentUpon>StudentDashBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\User\UserBanner.resx">
       <DependentUpon>UserBanner.cs</DependentUpon>
@@ -278,6 +296,10 @@
   <ItemGroup>
     <None Include="Resources\Border2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Schedule.jpg" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
