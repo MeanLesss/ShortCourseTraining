@@ -6,6 +6,7 @@ using System.Data.OleDb;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Documents;
@@ -58,9 +59,10 @@ WHERE u.Username = '" + username + "'" + "AND u.Password = '" + password + "' AN
                     user.Email = dt.Rows[0][7].ToString();
 
                     //read Image form binary
-                    if (dt.Rows[0][8].GetType() == typeof(byte))
+                    if (dt.Rows[0][8] is byte[])
                     {
-                        byte[] imageBytes = (byte[])dt.Rows[0][8];
+                        byte[] imageBytes = dt.Rows[0][8] as byte[];
+
                         MemoryStream ms = new MemoryStream(imageBytes);
                         user.Photo = Image.FromStream(ms);
                         ms.Flush();
@@ -129,12 +131,12 @@ WHERE u.Username = '" + username + "'" + "AND u.Password = '" + password + "' AN
                     user.Email = dt.Rows[0][7].ToString();
 
                     //read Image form binary
-                    if (dt.Rows[0][8].GetType() == typeof(byte))
+                    if (dt.Rows[0][8] is byte[])
                     {
                         byte[] imageBytes = (byte[])dt.Rows[0][8];
-                    MemoryStream ms = new MemoryStream(imageBytes);
-                    user.Photo = Image.FromStream(ms);
-                    ms.Flush();
+                        MemoryStream ms = new MemoryStream(imageBytes);
+                        user.Photo = Image.FromStream(ms);
+                        ms.Flush();
                     }
                     else
                     {
