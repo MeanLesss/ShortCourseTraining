@@ -9,7 +9,6 @@ namespace ShortCourseTraining.Model
     public class UserRole
     {
         public int UserRoleID { get; set; }
-        public int UserID { get; set; }
         public string RoleName { get; set; }
         public bool CanRead { get; set; }
         public bool CanWrite { get; set; }

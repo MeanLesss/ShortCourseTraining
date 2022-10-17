@@ -120,14 +120,14 @@
             this.comboBoxSubject.Font = new System.Drawing.Font("OCR A Extended", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSubject.FormattingEnabled = true;
             this.comboBoxSubject.Items.AddRange(new object[] {
-            "C#",
-            "C++",
-            "Python",
-            "HTML",
-            "CSS",
-            "KOTLIN",
-            "FLUTTER",
-            "JAVASCRIPT"});
+            "1.C#",
+            "2.C++",
+            "3.Python",
+            "4.HTML",
+            "5.CSS",
+            "6.KOTLIN",
+            "7.FLUTTER",
+            "8.JAVASCRIPT"});
             this.comboBoxSubject.Location = new System.Drawing.Point(636, 309);
             this.comboBoxSubject.Name = "comboBoxSubject";
             this.comboBoxSubject.Size = new System.Drawing.Size(369, 31);
@@ -199,6 +199,7 @@
             this.iconButtonAddCo.Text = "Add Course";
             this.iconButtonAddCo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.iconButtonAddCo.UseVisualStyleBackColor = false;
+            this.iconButtonAddCo.Click += new System.EventHandler(this.iconButtonAddCo_Click);
             // 
             // iconButton2
             // 
@@ -247,6 +248,7 @@
             this.iconButtonCancel.Text = "Cancel";
             this.iconButtonCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButtonCancel.UseVisualStyleBackColor = true;
+            this.iconButtonCancel.Click += new System.EventHandler(this.iconButtonCancel_Click);
             // 
             // label9
             // 

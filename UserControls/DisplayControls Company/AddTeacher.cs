@@ -11,11 +11,15 @@ using System.Windows.Forms;
 
 namespace ShortCourseTraining.UserControls.DisplayControls
 {
+    using ShortCourseTraining.Database;
+    using ShortCourseTraining.Model;
     public partial class AddTeacher : UserControl
     {
-        public AddTeacher()
+        User _user;
+        public AddTeacher(User user)
         {
             InitializeComponent();
+            _user = user;
         }
 
         private void iconPictureBoxTeacher_Click(object sender, EventArgs e)
@@ -32,124 +36,38 @@ namespace ShortCourseTraining.UserControls.DisplayControls
             }
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void AddTeacher_Load(object sender, EventArgs e)
         {
 
         }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxSex_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxTeacherName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePickerDOB_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxAddress_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxFamily_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxContactAddress_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxPhone_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxSubject_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        [Obsolete]
         private void iconButtonAddTeacher_Click(object sender, EventArgs e)
         {
-
+            if (textBoxPassword.Text == textBoxConfirmPass.Text)
+            {
+                var user = new User
+                {
+                    ComID = _user.ComID,
+                    Username = textBoxTeacherName.Text,
+                    Password = textBoxPassword.Text,
+                    Gender = comboBoxSex.Text,
+                    BirthPlace = textBoxBirthPlace.Text,
+                    Address = textBoxAddress.Text,
+                    ContactAddress = textBoxContactAddress.Text,
+                    FamilyStatus = textBoxFamily.Text,
+                    PhoneNumber = textBoxPhone.Text,
+                    Email = textBoxEmail.Text,
+                    TeachingSubject = comboBoxSubject.Text,
+                    Photo = iconPictureBoxTeacher.Image
+                };
+                new DatabaseManager().SignUpTeacher(user);
+            }
+            MessageBox.Show("Teacher created!");
         }
 
         private void iconButtonCancel_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBoxBirthPlace_TextChanged(object sender, EventArgs e)
-        {
-
+            this.Dispose();
         }
     }
 }

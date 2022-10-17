@@ -38,7 +38,7 @@
             this.iconButtonAddSubject = new FontAwesome.Sharp.IconButton();
             this.iconButtonCancel = new FontAwesome.Sharp.IconButton();
             this.dateTimePickerCreated = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxTeacherName = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxSubject)).BeginInit();
             this.SuspendLayout();
@@ -141,6 +141,7 @@
             this.iconButtonAddSubject.Text = "Add ";
             this.iconButtonAddSubject.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.iconButtonAddSubject.UseVisualStyleBackColor = false;
+            this.iconButtonAddSubject.Click += new System.EventHandler(this.iconButtonAddSubject_Click);
             // 
             // iconButtonCancel
             // 
@@ -157,6 +158,7 @@
             this.iconButtonCancel.Text = "Cancel";
             this.iconButtonCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButtonCancel.UseVisualStyleBackColor = true;
+            this.iconButtonCancel.Click += new System.EventHandler(this.iconButtonCancel_Click);
             // 
             // dateTimePickerCreated
             // 
@@ -166,18 +168,14 @@
             this.dateTimePickerCreated.Size = new System.Drawing.Size(369, 32);
             this.dateTimePickerCreated.TabIndex = 76;
             // 
-            // comboBox1
+            // comboBoxTeacherName
             // 
-            this.comboBox1.Font = new System.Drawing.Font("OCR A Extended", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Test 1 ",
-            "test 2",
-            "test 3"});
-            this.comboBox1.Location = new System.Drawing.Point(362, 225);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(369, 31);
-            this.comboBox1.TabIndex = 77;
+            this.comboBoxTeacherName.Font = new System.Drawing.Font("OCR A Extended", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxTeacherName.FormattingEnabled = true;
+            this.comboBoxTeacherName.Location = new System.Drawing.Point(362, 225);
+            this.comboBoxTeacherName.Name = "comboBoxTeacherName";
+            this.comboBoxTeacherName.Size = new System.Drawing.Size(369, 31);
+            this.comboBoxTeacherName.TabIndex = 77;
             // 
             // label5
             // 
@@ -194,7 +192,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxTeacherName);
             this.Controls.Add(this.dateTimePickerCreated);
             this.Controls.Add(this.iconPictureBoxSubject);
             this.Controls.Add(this.iconButtonAddSubject);
@@ -208,6 +206,7 @@
             this.ForeColor = System.Drawing.Color.Red;
             this.Name = "AddSubject";
             this.Size = new System.Drawing.Size(1523, 946);
+            this.Load += new System.EventHandler(this.AddSubject_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBoxSubject)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -225,7 +224,7 @@
         private FontAwesome.Sharp.IconButton iconButtonCancel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePickerCreated;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxTeacherName;
         private System.Windows.Forms.Label label5;
     }
 }

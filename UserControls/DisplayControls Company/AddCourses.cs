@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ShortCourseTraining.Database;
+using ShortCourseTraining.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,6 +34,26 @@ namespace ShortCourseTraining.UserControls.DisplayControls
             {
                 listBoxAddedSubject.Items.Remove(listBoxAddedSubject.SelectedItems[0]);
             }
+        }
+
+        private void iconButtonCancel_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void iconButtonAddCo_Click(object sender, EventArgs e)
+        {
+            string title = "";
+            foreach(var item in listBoxAddedSubject.Items)
+            {
+                title += " " + item;
+            }
+            var course = new Course{
+                SubjectTitle = title,
+                CourseName = textBoxCourseName.Text,
+                CourseHours = int.Parse(textBoxSubjectDur.Text)
+            };
+            new DatabaseManager().AddCourse(course);
         }
     }
 }

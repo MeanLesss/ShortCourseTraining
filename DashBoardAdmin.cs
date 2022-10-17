@@ -128,7 +128,7 @@ namespace ShortCourseTraining
 
         private void iconButtonAddTeacher_Click(object sender, EventArgs e)
         {
-            DisplayControls(new AddTeacher());
+            DisplayControls(new AddTeacher(_user));
         }
 
         private void iconButtonAllTeacher_Click(object sender, EventArgs e)

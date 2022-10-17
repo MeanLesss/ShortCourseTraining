@@ -35,7 +35,7 @@ namespace ShortCourseTraining.Database
             conn.Open();
             string authenticateQuery = @"SELECT * FROM Users as u
 INNER JOIN UserRole AS UR
-ON UR.UserID = u.ID
+ON UR.UserRoleID = u.Role_ID
 WHERE u.Username = '" + username + "'" + "AND u.Password = '" + password + "' AND UR.Role = 'Admin'";
             User user = new User();
             try
@@ -107,7 +107,7 @@ WHERE u.Username = '" + username + "'" + "AND u.Password = '" + password + "' AN
             conn.Open();
             string authenticateQuery = @"SELECT * FROM Users as u
 INNER JOIN UserRole AS UR
-ON UR.UserID = u.ID
+ON UR.UserRoleID = u.Role_ID
 WHERE u.Username = '" + username + "'" + "AND u.Password = '" + password + "' AND UR.Role = 'Student' OR UR.Role = 'Teacher'";
             User user = new User();
             try
@@ -145,7 +145,7 @@ WHERE u.Username = '" + username + "'" + "AND u.Password = '" + password + "' AN
 
                     user.CreatedDate = (DateTime)dt.Rows[0][9];
                     user.Status = (bool)dt.Rows[0][10];
-
+                    //user.UserRole.RoleName = dt.Rows[0][11].ToString();
                 }
                 else
                 {

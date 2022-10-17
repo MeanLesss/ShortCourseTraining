@@ -23,9 +23,9 @@ namespace ShortCourseTraining.Model
         public string Gender { get; set; } = "U/N";
         public DateTime DOB { get; set; }
         public string BirthPlace { get; set; }
-        public string Address { get; set; }
+        public string Address { get; set; } = "U/N";
         public string ContactAddress { get; set; }
-        public string FamilyStatus { get; set; }
+        public string FamilyStatus { get; set; } = "U/N";
         public string Description { get; set; } = "U/N";
         [Required]
         [Phone]
@@ -43,5 +43,8 @@ namespace ShortCourseTraining.Model
         public int AbsentCount { get; set; }
         public int AttendanceCount { get; set; } = 0;
         public DateTime AttendanceDate { get; set; } = DateTime.Now.Date;
+
+        //for teacher 
+        public string TeachingSubject { get; set; }
     }
 }
