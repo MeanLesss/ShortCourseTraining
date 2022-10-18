@@ -50,19 +50,19 @@ namespace ShortCourseTraining.UserControls.DisplayControls
             string query = "";
             if (_type == 0)//For courses search
             {
-                query = @"Select * from Subjects";
+                query = @"Select * from Courses as c where c.Course_name Like'%"+ textBoxSearch.Text +"%'";
             }
             if (_type == 1)//For teacher search
             {
-                query = @"Select * from Users as u where u.Role_ID = 94";
+                query = @"Select * from Users as u where u.Role_ID = 94 and u.Username Like'%"+ textBoxSearch.Text+"%'";
             }
             if (_type == 2)//For subject search
             {
-
+                query = @"Select * from Subjects as s where s.title Like '%" + textBoxSearch.Text + "%'";
             }
             if (_type == 3)//For student search
             {
-                query = @"Select * from Users as u where u.Role_ID = 88";
+                query = @"Select * from Users as u where u.Role_ID = 88 and u.Username Like'%" + textBoxSearch.Text + "%'";
             }
             conn = new OleDbConnection(cs);
             OleDbDataAdapter da = new OleDbDataAdapter(query, conn);

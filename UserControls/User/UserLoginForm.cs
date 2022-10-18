@@ -43,6 +43,10 @@ namespace ShortCourseTraining.UserControls.User
 
         private void ButtonLogIn_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(textBoxUsername.Text)) return;
+            if (string.IsNullOrEmpty(textBoxPassword.Text)) return;
+
+
             UserAuthentication authentication = new UserAuthentication();
             var user = authentication.STAuthentication(textBoxUsername.Text, textBoxPassword.Text);
             if (user != null)

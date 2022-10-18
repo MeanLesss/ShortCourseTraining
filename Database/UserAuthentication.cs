@@ -108,7 +108,8 @@ WHERE u.Username = '" + username + "'" + "AND u.Password = '" + password + "' AN
             string authenticateQuery = @"SELECT * FROM Users as u
 INNER JOIN UserRole AS UR
 ON UR.UserRoleID = u.Role_ID
-WHERE u.Username = '" + username + "'" + "AND u.Password = '" + password + "' AND UR.Role = 'Student' OR UR.Role = 'Teacher'";
+WHERE (u.Username = '" + username + "'" + "AND u.Password = '" + password + "' AND UR.Role = 'Student') " + "OR " +
+"(u.Username = '" + username + "'" + "AND u.Password = '" + password + "' AND UR.Role = 'Teacher')";
             User user = new User();
             try
             {
