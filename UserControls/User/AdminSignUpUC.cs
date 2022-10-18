@@ -37,7 +37,7 @@ namespace ShortCourseTraining
         }
         private void ButtonBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Dispose();
         }
 
         private void PictureBoxAdmin_Click(object sender, EventArgs e)
@@ -65,7 +65,7 @@ namespace ShortCourseTraining
             textBoxUsername.Clear();
             radioButtonFemale.Checked = false;
             radioButtonMale.Checked = false;
-            this.Hide();
+            this.Dispose();
         }
 
         [Obsolete]

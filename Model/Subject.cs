@@ -11,8 +11,8 @@ namespace ShortCourseTraining.Model
     {
         [Required]
         public string SubjectName { get; set; }
-        public DateTime SubjectDuration { get; set; }
-        public string TeacherName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
 
     }
 }

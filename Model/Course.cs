@@ -13,8 +13,8 @@ namespace ShortCourseTraining.Model
         Subject _subject = new Subject(); 
         [Required]
         public int ID { get; set; }
-        public string SubjectTitle { get; set; }
-        public string CourseName { get;set; }        
+        public string SubjectTitle { get; set; } = "NA";
+        public string CourseName { get;set; } = "NA";
         public DateTime CourseDuration{ get; set; }
         public int CourseHours{ get; set; }
     }

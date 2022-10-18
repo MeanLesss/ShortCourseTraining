@@ -31,9 +31,6 @@
             this.panelOption = new System.Windows.Forms.Panel();
             this.ButtonLogOut = new FontAwesome.Sharp.IconButton();
             this.panelControl = new System.Windows.Forms.Panel();
-            this.iconButtonPrivacy = new FontAwesome.Sharp.IconButton();
-            this.iconButtonUserInfo = new FontAwesome.Sharp.IconButton();
-            this.iconButtonSetting = new FontAwesome.Sharp.IconButton();
             this.iconButtonAddStudent = new FontAwesome.Sharp.IconButton();
             this.iconButtonAllStudent = new FontAwesome.Sharp.IconButton();
             this.iconButtonStudent = new FontAwesome.Sharp.IconButton();
@@ -84,9 +81,6 @@
             // panelControl
             // 
             this.panelControl.AutoScroll = true;
-            this.panelControl.Controls.Add(this.iconButtonPrivacy);
-            this.panelControl.Controls.Add(this.iconButtonUserInfo);
-            this.panelControl.Controls.Add(this.iconButtonSetting);
             this.panelControl.Controls.Add(this.iconButtonAddStudent);
             this.panelControl.Controls.Add(this.iconButtonAllStudent);
             this.panelControl.Controls.Add(this.iconButtonStudent);
@@ -106,69 +100,6 @@
             this.panelControl.Size = new System.Drawing.Size(377, 854);
             this.panelControl.TabIndex = 0;
             // 
-            // iconButtonPrivacy
-            // 
-            this.iconButtonPrivacy.BackColor = System.Drawing.Color.Gainsboro;
-            this.iconButtonPrivacy.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButtonPrivacy.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButtonPrivacy.FlatAppearance.BorderSize = 0;
-            this.iconButtonPrivacy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonPrivacy.Font = new System.Drawing.Font("OCR A Extended", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButtonPrivacy.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButtonPrivacy.IconColor = System.Drawing.Color.Black;
-            this.iconButtonPrivacy.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonPrivacy.Location = new System.Drawing.Point(0, 840);
-            this.iconButtonPrivacy.Name = "iconButtonPrivacy";
-            this.iconButtonPrivacy.Size = new System.Drawing.Size(360, 50);
-            this.iconButtonPrivacy.TabIndex = 18;
-            this.iconButtonPrivacy.Text = "Privacy Security";
-            this.iconButtonPrivacy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButtonPrivacy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButtonPrivacy.UseVisualStyleBackColor = false;
-            this.iconButtonPrivacy.Visible = false;
-            // 
-            // iconButtonUserInfo
-            // 
-            this.iconButtonUserInfo.BackColor = System.Drawing.Color.Gainsboro;
-            this.iconButtonUserInfo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButtonUserInfo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButtonUserInfo.FlatAppearance.BorderSize = 0;
-            this.iconButtonUserInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonUserInfo.Font = new System.Drawing.Font("OCR A Extended", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButtonUserInfo.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButtonUserInfo.IconColor = System.Drawing.Color.Black;
-            this.iconButtonUserInfo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonUserInfo.Location = new System.Drawing.Point(0, 790);
-            this.iconButtonUserInfo.Name = "iconButtonUserInfo";
-            this.iconButtonUserInfo.Size = new System.Drawing.Size(360, 50);
-            this.iconButtonUserInfo.TabIndex = 17;
-            this.iconButtonUserInfo.Text = "User Info";
-            this.iconButtonUserInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButtonUserInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButtonUserInfo.UseVisualStyleBackColor = false;
-            this.iconButtonUserInfo.Visible = false;
-            // 
-            // iconButtonSetting
-            // 
-            this.iconButtonSetting.BackColor = System.Drawing.Color.Chocolate;
-            this.iconButtonSetting.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButtonSetting.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButtonSetting.Font = new System.Drawing.Font("OCR A Extended", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButtonSetting.IconChar = FontAwesome.Sharp.IconChar.Cog;
-            this.iconButtonSetting.IconColor = System.Drawing.Color.Black;
-            this.iconButtonSetting.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonSetting.IconSize = 38;
-            this.iconButtonSetting.Location = new System.Drawing.Point(0, 725);
-            this.iconButtonSetting.Name = "iconButtonSetting";
-            this.iconButtonSetting.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.iconButtonSetting.Size = new System.Drawing.Size(360, 65);
-            this.iconButtonSetting.TabIndex = 16;
-            this.iconButtonSetting.Text = "Setting";
-            this.iconButtonSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButtonSetting.UseVisualStyleBackColor = false;
-            this.iconButtonSetting.Click += new System.EventHandler(this.iconButtonSetting_Click);
-            // 
             // iconButtonAddStudent
             // 
             this.iconButtonAddStudent.BackColor = System.Drawing.Color.Gainsboro;
@@ -182,7 +113,7 @@
             this.iconButtonAddStudent.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonAddStudent.Location = new System.Drawing.Point(0, 675);
             this.iconButtonAddStudent.Name = "iconButtonAddStudent";
-            this.iconButtonAddStudent.Size = new System.Drawing.Size(360, 50);
+            this.iconButtonAddStudent.Size = new System.Drawing.Size(377, 50);
             this.iconButtonAddStudent.TabIndex = 15;
             this.iconButtonAddStudent.Text = "Add Student";
             this.iconButtonAddStudent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -204,13 +135,14 @@
             this.iconButtonAllStudent.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonAllStudent.Location = new System.Drawing.Point(0, 625);
             this.iconButtonAllStudent.Name = "iconButtonAllStudent";
-            this.iconButtonAllStudent.Size = new System.Drawing.Size(360, 50);
+            this.iconButtonAllStudent.Size = new System.Drawing.Size(377, 50);
             this.iconButtonAllStudent.TabIndex = 14;
             this.iconButtonAllStudent.Text = "All Student";
             this.iconButtonAllStudent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButtonAllStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButtonAllStudent.UseVisualStyleBackColor = false;
             this.iconButtonAllStudent.Visible = false;
+            this.iconButtonAllStudent.Click += new System.EventHandler(this.iconButtonAllStudent_Click);
             // 
             // iconButtonStudent
             // 
@@ -225,7 +157,7 @@
             this.iconButtonStudent.Location = new System.Drawing.Point(0, 560);
             this.iconButtonStudent.Name = "iconButtonStudent";
             this.iconButtonStudent.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.iconButtonStudent.Size = new System.Drawing.Size(360, 65);
+            this.iconButtonStudent.Size = new System.Drawing.Size(377, 65);
             this.iconButtonStudent.TabIndex = 13;
             this.iconButtonStudent.Text = "Student";
             this.iconButtonStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -246,7 +178,7 @@
             this.iconButtonAddSubject.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonAddSubject.Location = new System.Drawing.Point(0, 510);
             this.iconButtonAddSubject.Name = "iconButtonAddSubject";
-            this.iconButtonAddSubject.Size = new System.Drawing.Size(360, 50);
+            this.iconButtonAddSubject.Size = new System.Drawing.Size(377, 50);
             this.iconButtonAddSubject.TabIndex = 12;
             this.iconButtonAddSubject.Text = "Add Subject";
             this.iconButtonAddSubject.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -268,13 +200,14 @@
             this.iconButtonAllSubject.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonAllSubject.Location = new System.Drawing.Point(0, 460);
             this.iconButtonAllSubject.Name = "iconButtonAllSubject";
-            this.iconButtonAllSubject.Size = new System.Drawing.Size(360, 50);
+            this.iconButtonAllSubject.Size = new System.Drawing.Size(377, 50);
             this.iconButtonAllSubject.TabIndex = 11;
             this.iconButtonAllSubject.Text = "All Subject";
             this.iconButtonAllSubject.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButtonAllSubject.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButtonAllSubject.UseVisualStyleBackColor = false;
             this.iconButtonAllSubject.Visible = false;
+            this.iconButtonAllSubject.Click += new System.EventHandler(this.iconButtonAllSubject_Click);
             // 
             // iconButtonSubject
             // 
@@ -289,7 +222,7 @@
             this.iconButtonSubject.Location = new System.Drawing.Point(0, 395);
             this.iconButtonSubject.Name = "iconButtonSubject";
             this.iconButtonSubject.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.iconButtonSubject.Size = new System.Drawing.Size(360, 65);
+            this.iconButtonSubject.Size = new System.Drawing.Size(377, 65);
             this.iconButtonSubject.TabIndex = 10;
             this.iconButtonSubject.Text = "Subject";
             this.iconButtonSubject.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -310,7 +243,7 @@
             this.iconButtonAddTeacher.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonAddTeacher.Location = new System.Drawing.Point(0, 345);
             this.iconButtonAddTeacher.Name = "iconButtonAddTeacher";
-            this.iconButtonAddTeacher.Size = new System.Drawing.Size(360, 50);
+            this.iconButtonAddTeacher.Size = new System.Drawing.Size(377, 50);
             this.iconButtonAddTeacher.TabIndex = 9;
             this.iconButtonAddTeacher.Text = "Add teacher";
             this.iconButtonAddTeacher.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -332,7 +265,7 @@
             this.iconButtonAllTeacher.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonAllTeacher.Location = new System.Drawing.Point(0, 295);
             this.iconButtonAllTeacher.Name = "iconButtonAllTeacher";
-            this.iconButtonAllTeacher.Size = new System.Drawing.Size(360, 50);
+            this.iconButtonAllTeacher.Size = new System.Drawing.Size(377, 50);
             this.iconButtonAllTeacher.TabIndex = 8;
             this.iconButtonAllTeacher.Text = "All teacher";
             this.iconButtonAllTeacher.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -354,7 +287,7 @@
             this.iconButtonTeacher.Location = new System.Drawing.Point(0, 230);
             this.iconButtonTeacher.Name = "iconButtonTeacher";
             this.iconButtonTeacher.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.iconButtonTeacher.Size = new System.Drawing.Size(360, 65);
+            this.iconButtonTeacher.Size = new System.Drawing.Size(377, 65);
             this.iconButtonTeacher.TabIndex = 7;
             this.iconButtonTeacher.Text = "Teacher";
             this.iconButtonTeacher.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -375,7 +308,7 @@
             this.iconButtonAddCourses.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonAddCourses.Location = new System.Drawing.Point(0, 180);
             this.iconButtonAddCourses.Name = "iconButtonAddCourses";
-            this.iconButtonAddCourses.Size = new System.Drawing.Size(360, 50);
+            this.iconButtonAddCourses.Size = new System.Drawing.Size(377, 50);
             this.iconButtonAddCourses.TabIndex = 6;
             this.iconButtonAddCourses.Text = "Add courses";
             this.iconButtonAddCourses.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -397,7 +330,7 @@
             this.iconButtonAllCourses.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonAllCourses.Location = new System.Drawing.Point(0, 130);
             this.iconButtonAllCourses.Name = "iconButtonAllCourses";
-            this.iconButtonAllCourses.Size = new System.Drawing.Size(360, 50);
+            this.iconButtonAllCourses.Size = new System.Drawing.Size(377, 50);
             this.iconButtonAllCourses.TabIndex = 5;
             this.iconButtonAllCourses.Text = "All courses";
             this.iconButtonAllCourses.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -419,7 +352,7 @@
             this.iconButtonCourse.Location = new System.Drawing.Point(0, 65);
             this.iconButtonCourse.Name = "iconButtonCourse";
             this.iconButtonCourse.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.iconButtonCourse.Size = new System.Drawing.Size(360, 65);
+            this.iconButtonCourse.Size = new System.Drawing.Size(377, 65);
             this.iconButtonCourse.TabIndex = 4;
             this.iconButtonCourse.Text = "Course   ";
             this.iconButtonCourse.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -439,7 +372,7 @@
             this.iconButtonDashBoard.IconSize = 38;
             this.iconButtonDashBoard.Location = new System.Drawing.Point(0, 0);
             this.iconButtonDashBoard.Name = "iconButtonDashBoard";
-            this.iconButtonDashBoard.Size = new System.Drawing.Size(360, 65);
+            this.iconButtonDashBoard.Size = new System.Drawing.Size(377, 65);
             this.iconButtonDashBoard.TabIndex = 3;
             this.iconButtonDashBoard.Text = "Dashboard";
             this.iconButtonDashBoard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -496,9 +429,6 @@
         private FontAwesome.Sharp.IconButton iconButtonAddCourses;
         private FontAwesome.Sharp.IconButton iconButtonAllCourses;
         private FontAwesome.Sharp.IconButton iconButtonCourse;
-        private FontAwesome.Sharp.IconButton iconButtonPrivacy;
-        private FontAwesome.Sharp.IconButton iconButtonUserInfo;
-        private FontAwesome.Sharp.IconButton iconButtonSetting;
         private FontAwesome.Sharp.IconButton iconButtonAddStudent;
         private FontAwesome.Sharp.IconButton iconButtonAllStudent;
         private FontAwesome.Sharp.IconButton iconButtonStudent;

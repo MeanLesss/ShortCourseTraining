@@ -27,5 +27,10 @@ namespace ShortCourseTraining.UserControls.Company
             textBoxUsername.Clear();
             this.Hide();
         }
+
+        private void ButtonLogIn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

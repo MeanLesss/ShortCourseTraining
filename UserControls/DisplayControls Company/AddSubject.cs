@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ShortCourseTraining.Database;
+using ShortCourseTraining.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -25,7 +27,6 @@ namespace ShortCourseTraining.UserControls.DisplayControls
         }
         private void AddSubject_Load(object sender, EventArgs e)
         {
-
             ReadData();
         }
         public void ReadData()
@@ -87,7 +88,13 @@ namespace ShortCourseTraining.UserControls.DisplayControls
 
         private void iconButtonAddSubject_Click(object sender, EventArgs e)
         {
+            Subject subject = new Subject();
+            subject.SubjectName = textBoxSubjectTitle.Text;
+            subject.StartDate = dateTimePickerStart.Value.Date;
+            subject.EndDate = dateTimePickerEnd.Value.Date;
 
+            new DatabaseManager().AddSubject(subject);
+            MessageBox.Show("Subject successfully added!!");
         }
     }
 }

@@ -155,11 +155,11 @@
     <Compile Include="UserControls\DisplayControls Company\AddTeacher.Designer.cs">
       <DependentUpon>AddTeacher.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\DisplayControls Company\AllCourses.cs">
+    <Compile Include="UserControls\DisplayControls Company\DisplayAll.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\DisplayControls Company\AllCourses.Designer.cs">
-      <DependentUpon>AllCourses.cs</DependentUpon>
+    <Compile Include="UserControls\DisplayControls Company\DisplayAll.Designer.cs">
+      <DependentUpon>DisplayAll.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\DisplayControls Company\Cards\StaticCountCard.cs">
       <SubType>UserControl</SubType>
@@ -262,8 +262,8 @@
     <EmbeddedResource Include="UserControls\DisplayControls Company\AddTeacher.resx">
       <DependentUpon>AddTeacher.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\DisplayControls Company\AllCourses.resx">
-      <DependentUpon>AllCourses.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\DisplayControls Company\DisplayAll.resx">
+      <DependentUpon>DisplayAll.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DisplayControls Company\Cards\StaticCountCard.resx">
       <DependentUpon>StaticCountCard.cs</DependentUpon>

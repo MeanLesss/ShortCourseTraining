@@ -276,7 +276,19 @@ VALUES(@CompanyID,@Username,@Gender,@Password,@Description,@Phone,@Email,@Photo,
         }
         public void AddSubject(Subject subject)
         {
+            //Insert into Subjects(Title, Start_date, End_date) Values(@Title, @Start_date, @End_date);
+            string insertQuery = @"Insert into Subjects(Title, Start_date, End_date) Values(@Title, @Start_date, @End_date)";
 
+            using (conn = new OleDbConnection(cs))
+            {
+                conn.Open();
+                command = new OleDbCommand(insertQuery, conn);
+
+                command.Parameters.Add("@Title", OleDbType.VarChar, 50).Value = subject.SubjectName;
+                command.Parameters.Add("@Start_date", OleDbType.Date, 50).Value = subject.StartDate.Date;
+                command.Parameters.Add("@End_date", OleDbType.Date, 50).Value = subject.EndDate.Date;
+                command.ExecuteNonQuery();
+            }
         }
 
 
@@ -313,4 +325,3 @@ VALUES(@CompanyID,@Username,@Gender,@Password,@Description,@Phone,@Email,@Photo,
     }
 }
 //
-//Insert into Subjects(Title, Start_date, End_date) Values(@Title, @Start_date, @End_date);

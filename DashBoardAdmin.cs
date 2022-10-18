@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,6 +18,9 @@ namespace ShortCourseTraining
     public partial class DashBoardAdmin : Form
     {
         private readonly User _user = null;
+        OleDbConnection conn = null;
+        string cs = ConfigurationManager.ConnectionStrings["ShortCourseDB"].ConnectionString;
+
         public DashBoardAdmin(User user)
         {
             InitializeComponent();
@@ -93,15 +98,6 @@ namespace ShortCourseTraining
             });
         }
 
-        private void iconButtonSetting_Click(object sender, EventArgs e)
-        {
-            ButtonRetraction(new List<Button>
-            {
-                iconButtonUserInfo,
-                iconButtonPrivacy
-            });
-        }
-
         //display panel
         private void DisplayControls(UserControl userControl)
         {
@@ -118,7 +114,13 @@ namespace ShortCourseTraining
 
         private void iconButtonAllCourses_Click(object sender, EventArgs e)
         {
-            DisplayControls(new AllCourses());
+            conn = new OleDbConnection(cs);
+            string query = @"select * from Courses";
+            OleDbDataAdapter da = new OleDbDataAdapter(query, conn);
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+            da.Fill(ds);
+            DisplayControls(new DisplayAll(ds, 0));
         }
 
         private void iconButtonAddCourses_Click(object sender, EventArgs e)
@@ -133,7 +135,13 @@ namespace ShortCourseTraining
 
         private void iconButtonAllTeacher_Click(object sender, EventArgs e)
         {
-
+            conn = new OleDbConnection(cs);
+            string query = @"Select * from Users as u where u.Role_ID = 94";
+            OleDbDataAdapter da = new OleDbDataAdapter(query, conn);
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+            da.Fill(ds);
+            DisplayControls(new DisplayAll(ds, 1));
         }
 
         private void iconButtonAddSubject_Click(object sender, EventArgs e)
@@ -145,5 +153,26 @@ namespace ShortCourseTraining
         {
             DisplayControls(new Add_Student());
         }
+        private void iconButtonAllSubject_Click(object sender, EventArgs e)
+        {
+            conn = new OleDbConnection(cs);
+            string query = @"Select * from Subjects";
+            OleDbDataAdapter da = new OleDbDataAdapter(query, conn);
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+            da.Fill(ds);
+            DisplayControls(new DisplayAll(ds, 2));
+        }
+        private void iconButtonAllStudent_Click(object sender, EventArgs e)
+        {
+            conn = new OleDbConnection(cs);
+            string query = @"Select * from Users as u where u.Role_ID = 88";
+            OleDbDataAdapter da = new OleDbDataAdapter(query, conn);
+            DataSet ds = new DataSet();
+            DataTable dt = new DataTable();
+            da.Fill(ds);
+            DisplayControls(new DisplayAll(ds, 3));
+        }
+
     }
 }

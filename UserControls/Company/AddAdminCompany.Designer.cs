@@ -78,6 +78,7 @@
             this.ButtonLogIn.Text = "Create";
             this.ButtonLogIn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.ButtonLogIn.UseVisualStyleBackColor = false;
+            this.ButtonLogIn.Click += new System.EventHandler(this.ButtonLogIn_Click);
             // 
             // textBoxPassword
             // 

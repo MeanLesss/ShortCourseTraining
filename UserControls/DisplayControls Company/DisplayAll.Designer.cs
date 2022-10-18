@@ -1,6 +1,6 @@
 ﻿namespace ShortCourseTraining.UserControls.DisplayControls
 {
-    partial class AllCourses
+    partial class DisplayAll
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,20 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewAll = new System.Windows.Forms.DataGridView();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.iconButtonSearch = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAll)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewAll
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 165);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1523, 781);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewAll.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewAll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAll.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridViewAll.Location = new System.Drawing.Point(0, 165);
+            this.dataGridViewAll.Name = "dataGridViewAll";
+            this.dataGridViewAll.Size = new System.Drawing.Size(1523, 781);
+            this.dataGridViewAll.TabIndex = 0;
             // 
             // textBoxSearch
             // 
@@ -50,7 +52,6 @@
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(534, 34);
             this.textBoxSearch.TabIndex = 1;
-            this.textBoxSearch.Text = "Search";
             this.textBoxSearch.Enter += new System.EventHandler(this.textBoxSearch_Enter);
             this.textBoxSearch.Leave += new System.EventHandler(this.textBoxSearch_Leave);
             // 
@@ -71,17 +72,30 @@
             this.iconButtonSearch.Text = "Search";
             this.iconButtonSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButtonSearch.UseVisualStyleBackColor = false;
+            this.iconButtonSearch.Click += new System.EventHandler(this.iconButtonSearch_Click);
             // 
-            // AllCourses
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(270, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 25);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Search name";
+            // 
+            // DisplayAll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.iconButtonSearch);
             this.Controls.Add(this.textBoxSearch);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "AllCourses";
+            this.Controls.Add(this.dataGridViewAll);
+            this.Name = "DisplayAll";
             this.Size = new System.Drawing.Size(1523, 946);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.AllCourses_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAll)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -89,8 +103,9 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewAll;
         private System.Windows.Forms.TextBox textBoxSearch;
         private FontAwesome.Sharp.IconButton iconButtonSearch;
+        private System.Windows.Forms.Label label1;
     }
 }
