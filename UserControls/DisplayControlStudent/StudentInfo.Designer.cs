@@ -186,6 +186,7 @@
             this.iconButtonAddStdent.Text = "Save";
             this.iconButtonAddStdent.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.iconButtonAddStdent.UseVisualStyleBackColor = false;
+            this.iconButtonAddStdent.Click += new System.EventHandler(this.iconButtonAddStdent_Click);
             // 
             // textBoxBirthPlace
             // 
@@ -276,6 +277,7 @@
             this.iconButtonCancel.Text = "Cancel";
             this.iconButtonCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButtonCancel.UseVisualStyleBackColor = true;
+            this.iconButtonCancel.Click += new System.EventHandler(this.iconButtonCancel_Click);
             // 
             // label1
             // 

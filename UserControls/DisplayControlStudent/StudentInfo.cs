@@ -32,5 +32,15 @@ namespace ShortCourseTraining.UserControls.DisplayControlStudent
             textBoxEmail.Text = _user.Email;
             iconPictureBoxStudent.Image = _user.Photo;
         }
+
+        private void iconButtonCancel_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void iconButtonAddStdent_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This part not done!!");
+        }
     }
 }

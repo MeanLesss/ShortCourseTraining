@@ -30,7 +30,7 @@ namespace ShortCourseTraining.UserControls.Company
 
         private void ButtonLogIn_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("This part is not done yet :(");
         }
     }
 }

@@ -24,13 +24,7 @@ namespace ShortCourseTraining.Database
 
         public User AdminAuthentication(string username, string password)
         {
-            //List<User> users = new List<User>();
-
-            /*SELECT * FROM Users as u 
-            INNER JOIN UserRole AS UR
-             ON UR.UserID = u.ID
-            WHERE u.Username =  'mean'  AND u.Password =  '123' AND UR.Role = 'Admin';
-            */
+           
             conn = new OleDbConnection(cs);
             conn.Open();
             string authenticateQuery = @"SELECT * FROM Users as u
@@ -98,11 +92,6 @@ WHERE u.Username = '" + username + "'" + "AND u.Password = '" + password + "' AN
         {
             //List<User> users = new List<User>();
 
-            /*SELECT * FROM Users as u 
-            INNER JOIN UserRole AS UR
-             ON UR.UserID = u.ID
-            WHERE u.Username =  'mean'  AND u.Password =  '123' AND UR.Role = 'Admin';
-            */
             conn = new OleDbConnection(cs);
             conn.Open();
             string authenticateQuery = @"SELECT * FROM Users as u
